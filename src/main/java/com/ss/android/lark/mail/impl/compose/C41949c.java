@@ -39,11 +39,6 @@ import com.ss.android.lark.mail.impl.action.NewMailAction;
 import com.ss.android.lark.mail.impl.action.ReplyAllMailAction;
 import com.ss.android.lark.mail.impl.action.ReplyMailAction;
 import com.ss.android.lark.mail.impl.action.SaveDraftAction;
-import com.ss.android.lark.mail.impl.compose.AbstractC41994h;
-import com.ss.android.lark.mail.impl.compose.C41923a;
-import com.ss.android.lark.mail.impl.compose.C41949c;
-import com.ss.android.lark.mail.impl.compose.C41974f;
-import com.ss.android.lark.mail.impl.compose.ComposeMailView;
 import com.ss.android.lark.mail.impl.compose.attachment.C41936a;
 import com.ss.android.lark.mail.impl.compose.attachment.LocalAttachment;
 import com.ss.android.lark.mail.impl.compose.image.AbstractC42000a;
@@ -1811,7 +1806,7 @@ public class C41949c extends BasePresenter<AbstractC41994h.AbstractC41995a, Abst
         if (a4 != 0) {
             boolean z4 = false;
             for (Uri uri2 : list) {
-                String a5 = LarkUriUtil.m95300a(C41816b.m166115a().mo150132b(), uri2);
+                String a5 = LarkUriUtil.get_filename_from_URI_rn_(C41816b.m166115a().mo150132b(), uri2);
                 if (!a3 || !C43766i.m173485a(a5)) {
                     if (a4 == 2) {
                         z3 = true;

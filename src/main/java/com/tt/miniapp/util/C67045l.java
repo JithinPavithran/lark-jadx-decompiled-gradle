@@ -38,7 +38,7 @@ public class C67045l {
         if (a != ImageUtils.ImageType.TYPE_UNKNOWN) {
             return value;
         }
-        String d = C69104g.m265935d(file);
+        String d = C69104g.get_file_extension_rn_(file);
         return d.length() != 0 ? d : value;
     }
 
@@ -47,7 +47,7 @@ public class C67045l {
         if (str == null || str.length() == 0) {
             return null;
         }
-        return f169018a.get(C69104g.m265935d(new File(str)));
+        return f169018a.get(C69104g.get_file_extension_rn_(new File(str)));
     }
 
     /* renamed from: a */
@@ -148,7 +148,7 @@ public class C67045l {
     /* renamed from: a */
     public static File m261300a(File file, int i, int i2, Bitmap.CompressFormat compressFormat, int i3, Context context) throws IOException {
         File b = C12791h.m52864b(context);
-        return m261301a(file, i, i2, compressFormat, i3, new File(b, System.currentTimeMillis() + "." + C69104g.m265935d(file)).getAbsolutePath());
+        return m261301a(file, i, i2, compressFormat, i3, new File(b, System.currentTimeMillis() + "." + C69104g.get_file_extension_rn_(file)).getAbsolutePath());
     }
 
     /* JADX WARNING: Removed duplicated region for block: B:18:0x0043  */

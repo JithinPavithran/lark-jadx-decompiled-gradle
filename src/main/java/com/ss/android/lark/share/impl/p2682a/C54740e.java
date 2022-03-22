@@ -19,7 +19,7 @@ public class C54740e extends AbstractC54724a {
 
     @Override // com.ss.android.lark.share.impl.AbstractC54744b
     /* renamed from: c */
-    public void mo186867c(Intent intent) {
+    public void handle_intent_action_rn_(Intent intent) {
     }
 
     @Override // com.ss.android.lark.share.impl.AbstractC54744b

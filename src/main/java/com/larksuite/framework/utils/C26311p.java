@@ -322,7 +322,7 @@ public class C26311p {
     }
 
     /* renamed from: b */
-    public static String m95280b(String str) {
+    public static String get_mime_type_from_file_extension_rn_(String str) {
         String mimeTypeFromExtension = MimeTypeMap.getSingleton().getMimeTypeFromExtension(str);
         if (mimeTypeFromExtension == null) {
             return "*/*";
@@ -335,7 +335,7 @@ public class C26311p {
         if (TextUtils.isEmpty(str)) {
             return "*/*";
         }
-        String b = m95280b(m95284d(str));
+        String b = get_mime_type_from_file_extension_rn_(m95284d(str));
         if (TextUtils.isEmpty(b)) {
             return "*/*";
         }

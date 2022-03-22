@@ -32,7 +32,6 @@ import com.larksuite.suite.R;
 import com.ss.android.lark.log.Log;
 import com.ss.android.lark.mail.impl.C41816b;
 import com.ss.android.lark.mail.impl.compose.C41970e;
-import com.ss.android.lark.mail.impl.mailtoolbar.plugins.p2199a.C42780d;
 import com.ss.android.lark.mail.impl.mailtoolbar.plugins.toolbar.MailItemId;
 import com.ss.android.lark.mail.impl.p2171h.p2172a.C42209j;
 import com.ss.android.lark.mail.impl.p2171h.p2173b.C42256d;
@@ -212,7 +211,7 @@ public class C42762a extends AbstractC6207c {
 
                     public void run() {
                         try {
-                            if (TextUtils.isEmpty(LarkUriUtil.m95300a(C41816b.m166115a().mo150132b(), uri))) {
+                            if (TextUtils.isEmpty(LarkUriUtil.get_filename_from_URI_rn_(C41816b.m166115a().mo150132b(), uri))) {
                                 Log.m165383e("MailAttachmentPickerFragment", "onItemClicked invalid file");
                                 return;
                             }

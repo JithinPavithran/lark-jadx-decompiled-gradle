@@ -98,7 +98,7 @@ public abstract class AbstractC42000a<T> {
     /* renamed from: g */
     public void mo150990g() {
         if (this.f106597e != null) {
-            String a = LarkUriUtil.m95300a(C41816b.m166115a().mo150132b(), this.f106597e);
+            String a = LarkUriUtil.get_filename_from_URI_rn_(C41816b.m166115a().mo150132b(), this.f106597e);
             if (TextUtils.isEmpty(a)) {
                 Log.m165383e("AbstractUploadTask", "uploadFile fileName empty");
                 this.f106595c.mo150874a(this.f106594b, null, false, 0);

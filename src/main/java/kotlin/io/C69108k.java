@@ -24,7 +24,7 @@ class C69108k extends C69107j {
     }
 
     /* renamed from: d */
-    public static final String m265935d(File file) {
+    public static final String get_file_extension_rn_(File file) {
         Intrinsics.checkParameterIsNotNull(file, "$this$extension");
         String name = file.getName();
         Intrinsics.checkExpressionValueIsNotNull(name, "name");

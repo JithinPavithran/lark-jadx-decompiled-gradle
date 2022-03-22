@@ -240,7 +240,7 @@ public final class LarkUriUtil {
         if (l != null) {
             return l.longValue();
         }
-        File j = rVar.m95314j(context, uri);
+        File j = rVar.get_file_from_uri_rn_(context, uri);
         if (j != null) {
             return j.length();
         }
@@ -250,7 +250,7 @@ public final class LarkUriUtil {
 
     @JvmStatic
     /* renamed from: c */
-    public static final Long m95305c(Context context, Uri uri) {
+    public static final Long get_file_last_modified_from_URI_rn_(Context context, Uri uri) {
         Intrinsics.checkParameterIsNotNull(context, "$this$getUriLastModified");
         Intrinsics.checkParameterIsNotNull(uri, "uri");
         LarkUriUtil rVar = f64955e;
@@ -258,7 +258,7 @@ public final class LarkUriUtil {
         if (l != null) {
             return l;
         }
-        File j = rVar.m95314j(context, uri);
+        File j = rVar.get_file_from_uri_rn_(context, uri);
         if (j != null) {
             return Long.valueOf(j.lastModified());
         }
@@ -281,7 +281,7 @@ public final class LarkUriUtil {
         if (l != null) {
             return l.longValue();
         }
-        File j = f64955e.m95314j(context, uri);
+        File j = f64955e.get_file_from_uri_rn_(context, uri);
         if (j != null) {
             return j.length();
         }
@@ -291,22 +291,22 @@ public final class LarkUriUtil {
 
     @JvmStatic
     /* renamed from: f */
-    public static final String m95310f(Context context, Uri uri) {
+    public static final String get_mime_type_from_uri_rn_(Context context, Uri uri) {
         Intrinsics.checkParameterIsNotNull(context, "$this$getUriMimeType");
         Intrinsics.checkParameterIsNotNull(uri, "uri");
         String type = context.getContentResolver().getType(uri);
         if (type != null && !Intrinsics.areEqual(type, "*/*")) {
             return type;
         }
-        File j = f64955e.m95314j(context, uri);
+        File j = f64955e.get_file_from_uri_rn_(context, uri);
         if (j != null) {
-            return C26311p.m95280b(C69104g.m265935d(j));
+            return C26311p.get_mime_type_from_file_extension_rn_(C69104g.get_file_extension_rn_(j));
         }
         return "*/*";
     }
 
     /* renamed from: j */
-    private final File m95314j(Context context, Uri uri) {
+    private final File get_file_from_uri_rn_(Context context, Uri uri) {
         File a = UriCompatUtil.m95042a(context, uri, false, 4, null);
         if (a != null) {
             try {
@@ -323,7 +323,7 @@ public final class LarkUriUtil {
 
     @JvmStatic
     /* renamed from: a */
-    public static final String m95300a(Context context, Uri uri) {
+    public static final String get_filename_from_URI_rn_(Context context, Uri uri) {
         String str;
         Intrinsics.checkParameterIsNotNull(context, "$this$getUriFileName");
         Intrinsics.checkParameterIsNotNull(uri, "uri");
@@ -340,7 +340,7 @@ public final class LarkUriUtil {
         if (str != null) {
             return str;
         }
-        File j = rVar.m95314j(context, uri);
+        File j = rVar.get_file_from_uri_rn_(context, uri);
         if (j != null) {
             return j.getName();
         }

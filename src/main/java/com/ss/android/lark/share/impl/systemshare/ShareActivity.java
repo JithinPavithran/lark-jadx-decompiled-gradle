@@ -205,7 +205,10 @@ public class ShareActivity extends BaseFragmentActivity {
     }
 
     /* renamed from: a */
-    private boolean m212441a(Intent intent) {
+    private boolean m212441a_always_true(Intent intent) {
+        /*
+         * Always return true
+         */
         if (intent == null) {
             return true;
         }
@@ -221,14 +224,25 @@ public class ShareActivity extends BaseFragmentActivity {
     @Override // androidx.activity.ComponentActivity, androidx.core.app.ComponentActivity, androidx.appcompat.app.AppCompatActivity, androidx.fragment.app.FragmentActivity, com.larksuite.component.air.AirActivity, com.ss.android.lark.base.fragment.BaseFragmentActivity
     public void onCreate(Bundle bundle) {
         AbstractC54714a a = C54713a.m212321a();
+        /*
+         * NOTES:
+         * This is true when authenticated? or are they looking for sender's package name?
+         */
         if (!a.mo178389b()) {
             super.onCreate(bundle);
+            /* NOTES:
+             * create a new activity with the following set
+                    intent2.putExtra("extra_uri_from_link", intent.getData());
+                    intent2.putExtra("extra_calling_activity_package_name", callingActivity.getPackageName());
+                    intent2.putExtra("extra_calling_activity_class_name", callingActivity.getClassName());
+             * and start (send to) com.ss.android.lark.authorization.AuthorizationActivity
+             */
             a.mo178387a(this);
             finish();
             return;
         }
         Intent intent = null;
-        if (!m212441a(getIntent())) {
+        if (/* always false */ !m212441a_always_true(getIntent())) {
             getIntent().replaceExtras((Bundle) null);
             Log.m165397w("ShareActivity", "checkParamsValidity: true");
         }
@@ -237,7 +251,7 @@ public class ShareActivity extends BaseFragmentActivity {
             getWindow().getDecorView().setSystemUiVisibility(1280);
             getWindow().setStatusBarColor(0);
         }
-        if (!C54713a.m212321a().mo178391d().mo178398a()) {
+        if (/* if not logged in */ !C54713a.m212321a().mo178391d().mo178398a()) {
             Intent intent2 = getIntent();
             if (m212445c(intent2)) {
                 intent = intent2;
@@ -248,7 +262,7 @@ public class ShareActivity extends BaseFragmentActivity {
             return;
         }
         Intent intent3 = getIntent();
-        if (intent3 == null) {
+        if (/* if intent is empty */ intent3 == null) {
             Log.m165389i("ShareActivity", "getIntent is empty");
             finish();
             return;

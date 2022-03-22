@@ -134,7 +134,7 @@ public final class FileUtils {
         Intrinsics.checkParameterIsNotNull(uri, "uri");
         Application application = LarkContext.getApplication();
         Intrinsics.checkExpressionValueIsNotNull(application, "LarkContext.getApplication()");
-        return LarkUriUtil.m95300a(application, uri);
+        return LarkUriUtil.get_filename_from_URI_rn_(application, uri);
     }
 
     /* renamed from: c */

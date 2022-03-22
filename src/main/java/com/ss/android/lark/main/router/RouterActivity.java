@@ -108,7 +108,7 @@ public class RouterActivity extends AppCompatActivity {
     }
 
     /* renamed from: b */
-    private boolean m176536b(Intent intent) {
+    private boolean always_true_rn_(Intent intent) {
         if (intent == null) {
             return true;
         }
@@ -161,7 +161,8 @@ public class RouterActivity extends AppCompatActivity {
     /* access modifiers changed from: protected */
     @Override // androidx.activity.ComponentActivity, androidx.core.app.ComponentActivity, androidx.appcompat.app.AppCompatActivity, androidx.fragment.app.FragmentActivity
     public void onCreate(Bundle bundle) {
-        if (!m176536b(getIntent())) {
+        /* replace bundle with null */
+        if (!always_true_rn_(getIntent())) {
             getIntent().replaceExtras((Bundle) null);
             Log.m165397w("RouterActivity", "checkParamsValidity: true");
         }

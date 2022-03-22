@@ -68,7 +68,7 @@ public abstract class AbstractC54723a implements AbstractC54744b {
             mo186869d(intent);
             return true;
         }
-        mo186867c(intent);
+        handle_intent_action_rn_(intent);
         return true;
     }
 }

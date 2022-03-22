@@ -103,7 +103,7 @@ public final class MediaStoreUtil {
         if (mo93329b(d)) {
             return DirType.DOCUMENTS;
         }
-        String b = C26311p.m95280b(d);
+        String b = C26311p.get_mime_type_from_file_extension_rn_(d);
         Intrinsics.checkExpressionValueIsNotNull(b, "mimeType");
         if (StringsKt.startsWith$default(b, "image", false, 2, (Object) null)) {
             return DirType.PICTURES;

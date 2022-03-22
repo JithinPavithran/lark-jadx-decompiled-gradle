@@ -165,7 +165,7 @@ public class C52054a {
                         C29613e.C29615a a = ((C29613e.C29615a) ((C29613e.C29615a) C29613e.m109504a().mo125332j(str)).mo125328c(num.intValue())).mo106700a(uri);
                         Application application = LarkContext.getApplication();
                         if (application != null) {
-                            String f = LarkUriUtil.m95310f(application, uri);
+                            String f = LarkUriUtil.get_mime_type_from_uri_rn_(application, uri);
                             if (f == null) {
                                 f = "*/*";
                             }

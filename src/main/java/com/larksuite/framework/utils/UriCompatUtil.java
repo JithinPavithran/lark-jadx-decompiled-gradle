@@ -35,17 +35,17 @@ public final class UriCompatUtil {
     }
 
     /* renamed from: a */
-    private final boolean m95048a(File file) {
+    private final boolean file_exists_and_readable_rn_(File file) {
         return file != null && file.exists() && file.canRead();
     }
 
     /* renamed from: a */
     private final File m95045a(String str, boolean z) {
-        return m95050b(StringsKt.replaceFirst$default(str, "raw:", "", false, 4, (Object) null), z);
+        return get_file_from_filename_rn_(StringsKt.replaceFirst$default(str, "raw:", "", false, 4, (Object) null), z);
     }
 
     /* renamed from: b */
-    private final File m95050b(String str, boolean z) {
+    private final File get_file_from_filename_rn_(String str, boolean z) {
         if (str == null) {
             return null;
         }
@@ -53,7 +53,7 @@ public final class UriCompatUtil {
         if (!z) {
             return file;
         }
-        if (m95048a(file)) {
+        if (file_exists_and_readable_rn_(file)) {
             return file;
         }
         return null;
@@ -128,25 +128,25 @@ public final class UriCompatUtil {
         } else if (StringsKt.equals(str2, "home", true)) {
             file = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOCUMENTS), str3);
         }
-        if (m95048a(file)) {
+        if (file_exists_and_readable_rn_(file)) {
             return file;
         }
         File file2 = new File(Environment.getExternalStorageDirectory(), str3);
-        if (m95048a(file2)) {
+        if (file_exists_and_readable_rn_(file2)) {
             return file2;
         }
         if (split$default.size() > 2) {
             String substring = documentId.substring(StringsKt.indexOf$default((CharSequence) str, ':', 0, false, 6, (Object) null) + 1);
             Intrinsics.checkExpressionValueIsNotNull(substring, "(this as java.lang.String).substring(startIndex)");
             File file3 = new File(Environment.getExternalStorageDirectory(), substring);
-            if (m95048a(file3)) {
+            if (file_exists_and_readable_rn_(file3)) {
                 Log.m165397w("UriCompatUtil", "Illegal File Name Found");
                 return file3;
             }
         }
         for (String str4 : CollectionsKt.listOf((Object[]) new String[]{"SECONDARY_STORAGE", "EXTERNAL_STORAGE"})) {
             File file4 = new File(str4, str3);
-            if (f64857a.m95048a(file4)) {
+            if (f64857a.file_exists_and_readable_rn_(file4)) {
                 return file4;
             }
         }
@@ -158,7 +158,7 @@ public final class UriCompatUtil {
         if (!StringsKt.equals("file", uri.getScheme(), true)) {
             return null;
         }
-        return m95050b(uri.getPath(), z);
+        return get_file_from_filename_rn_(uri.getPath(), z);
     }
 
     /* renamed from: d */
@@ -169,8 +169,8 @@ public final class UriCompatUtil {
         }
         File externalStoragePublicDirectory = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS);
         Intrinsics.checkExpressionValueIsNotNull(externalStoragePublicDirectory, "Environment.getExternalS…ment.DIRECTORY_DOWNLOADS)");
-        File b2 = m95050b(Uri.withAppendedPath(Uri.parse(externalStoragePublicDirectory.getAbsolutePath()), b).toString(), z);
-        if (m95048a(b2)) {
+        File b2 = get_file_from_filename_rn_(Uri.withAppendedPath(Uri.parse(externalStoragePublicDirectory.getAbsolutePath()), b).toString(), z);
+        if (file_exists_and_readable_rn_(b2)) {
             return b2;
         }
         return null;
@@ -245,15 +245,15 @@ public final class UriCompatUtil {
         if (array != null) {
             Uri uri = MediaStore.Downloads.EXTERNAL_CONTENT_URI;
             Intrinsics.checkExpressionValueIsNotNull(uri, "Downloads.EXTERNAL_CONTENT_URI");
-            return m95050b(m95046a(context, uri, ((String[]) array)[1]), z);
+            return get_file_from_filename_rn_(m95046a(context, uri, ((String[]) array)[1]), z);
         }
         throw new TypeCastException("null cannot be cast to non-null type kotlin.Array<T>");
     }
 
     /* renamed from: e */
-    private final File m95054e(Context context, Uri uri, boolean z) {
+    private final File m95054e(Context context, Uri uri_for_document_rn_, boolean z) {
         Uri uri2;
-        String documentId = DocumentsContract.getDocumentId(uri);
+        String documentId = DocumentsContract.getDocumentId(uri_for_document_rn_);
         Intrinsics.checkExpressionValueIsNotNull(documentId, "docId");
         List split$default = StringsKt.split$default((CharSequence) documentId, new String[]{":"}, false, 0, 6, (Object) null);
         String str = (String) split$default.get(0);
@@ -263,17 +263,17 @@ public final class UriCompatUtil {
                 if (hashCode == 112202875 && str.equals("video")) {
                     uri2 = MediaStore.Video.Media.EXTERNAL_CONTENT_URI;
                     Intrinsics.checkExpressionValueIsNotNull(uri2, "MediaStore.Video.Media.EXTERNAL_CONTENT_URI");
-                    return m95050b(m95046a(context, uri2, (String) split$default.get(1)), z);
+                    return get_file_from_filename_rn_(m95046a(context, uri2, (String) split$default.get(1)), z);
                 }
             } else if (str.equals("image")) {
                 uri2 = MediaStore.Images.Media.EXTERNAL_CONTENT_URI;
                 Intrinsics.checkExpressionValueIsNotNull(uri2, "MediaStore.Images.Media.EXTERNAL_CONTENT_URI");
-                return m95050b(m95046a(context, uri2, (String) split$default.get(1)), z);
+                return get_file_from_filename_rn_(m95046a(context, uri2, (String) split$default.get(1)), z);
             }
         } else if (str.equals("audio")) {
             uri2 = MediaStore.Audio.Media.EXTERNAL_CONTENT_URI;
             Intrinsics.checkExpressionValueIsNotNull(uri2, "MediaStore.Audio.Media.EXTERNAL_CONTENT_URI");
-            return m95050b(m95046a(context, uri2, (String) split$default.get(1)), z);
+            return get_file_from_filename_rn_(m95046a(context, uri2, (String) split$default.get(1)), z);
         }
         if (Build.VERSION.SDK_INT >= 29) {
             uri2 = MediaStore.Files.getContentUri("external");
@@ -281,7 +281,7 @@ public final class UriCompatUtil {
             uri2 = MediaStore.Files.getContentUri("external");
         }
         Intrinsics.checkExpressionValueIsNotNull(uri2, "if (VERSION.SDK_INT >= V…\"external\")\n            }");
-        return m95050b(m95046a(context, uri2, (String) split$default.get(1)), z);
+        return get_file_from_filename_rn_(m95046a(context, uri2, (String) split$default.get(1)), z);
     }
 
     /* renamed from: f */
@@ -291,9 +291,9 @@ public final class UriCompatUtil {
             return null;
         }
         if (Intrinsics.areEqual("com.google.android.apps.photos.content", uri.getAuthority())) {
-            return m95050b(uri.getLastPathSegment(), z);
+            return get_file_from_filename_rn_(uri.getLastPathSegment(), z);
         }
-        File b = m95050b(m95047a(context, uri, (String) null, (String[]) null), z);
+        File b = get_file_from_filename_rn_(m95047a(context, uri, (String) null, (String[]) null), z);
         if (b != null) {
             return b;
         }
@@ -309,7 +309,7 @@ public final class UriCompatUtil {
                     return null;
                 }
                 UriCompatUtil apVar = f64857a;
-                return apVar.m95050b(b2.getAbsolutePath() + removePrefix2, z);
+                return apVar.get_file_from_filename_rn_(b2.getAbsolutePath() + removePrefix2, z);
             } else if (StringsKt.startsWith$default(removePrefix, "external_files", false, 2, (Object) null)) {
                 return new File(Environment.getExternalStorageDirectory(), StringsKt.removePrefix(removePrefix, (CharSequence) "external_files"));
             } else {
@@ -319,7 +319,7 @@ public final class UriCompatUtil {
             return null;
         } else {
             Intrinsics.checkExpressionValueIsNotNull(path, "uri.path ?: return null");
-            return m95050b(C26308n.m95251a(context) + File.separator + path, z);
+            return get_file_from_filename_rn_(C26308n.m95251a(context) + File.separator + path, z);
         }
     }
 
@@ -339,7 +339,7 @@ public final class UriCompatUtil {
             Uri withAppendedId = ContentUris.withAppendedId(Uri.parse(it.next()), j);
             Intrinsics.checkExpressionValueIsNotNull(withAppendedId, "ContentUris.withAppendedId(Uri.parse(it), id)");
             UriCompatUtil apVar = f64857a;
-            File b = apVar.m95050b(apVar.m95047a(context, withAppendedId, (String) null, (String[]) null), z);
+            File b = apVar.get_file_from_filename_rn_(apVar.m95047a(context, withAppendedId, (String) null, (String[]) null), z);
             if (b != null) {
                 return b;
             }

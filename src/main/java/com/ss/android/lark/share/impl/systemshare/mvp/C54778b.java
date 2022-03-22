@@ -17,7 +17,6 @@ import com.ss.android.lark.share.dto.ShareChatDto;
 import com.ss.android.lark.share.dto.SystemShareData;
 import com.ss.android.lark.share.impl.C54745c;
 import com.ss.android.lark.share.impl.systemshare.C54767d;
-import com.ss.android.lark.share.impl.systemshare.mvp.AbstractC54774a;
 import com.ss.android.lark.utils.C57788ai;
 import com.ss.android.lark.utils.rxjava.C57865c;
 import java.io.File;
@@ -138,8 +137,8 @@ public class C54778b extends BaseModel implements AbstractC54774a.AbstractC54775
         Map<String, Long> hashMap = new HashMap<>();
         ArrayList arrayList2 = new ArrayList();
         for (Uri uri : list) {
-            boolean a = C54767d.m212499a(this.f135258d, uri);
-            if (a || !C54767d.m212500b(this.f135258d, uri)) {
+            boolean a = C54767d.if_URI_has_image_MIME_type_rn_(this.f135258d, uri);
+            if (a || !C54767d.if_URI_has_video_MIME_type_rn_(this.f135258d, uri)) {
                 z = false;
             } else {
                 z = true;

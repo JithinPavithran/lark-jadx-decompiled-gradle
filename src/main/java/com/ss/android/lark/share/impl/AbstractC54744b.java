@@ -8,7 +8,7 @@ public interface AbstractC54744b {
     boolean mo186862a(Intent intent);
 
     /* renamed from: c */
-    void mo186867c(Intent intent);
+    void handle_intent_action_rn_(Intent intent);
 
     /* renamed from: c */
     boolean mo186868c();

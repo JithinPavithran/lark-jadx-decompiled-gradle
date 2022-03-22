@@ -77,7 +77,7 @@ public class GetImageInfoHandlerPlugin extends OPPlugin {
                     getImageInfoHandlerResponse.width = options.outWidth;
                     getImageInfoHandlerResponse.height = options.outHeight;
                     getImageInfoHandlerResponse.path = gVar.mo235647a();
-                    getImageInfoHandlerResponse.type = C69104g.m265935d(new File(gVar.mo235654h()));
+                    getImageInfoHandlerResponse.type = C69104g.get_file_extension_rn_(new File(gVar.mo235654h()));
                     return getImageInfoHandlerResponse;
                 }
             }

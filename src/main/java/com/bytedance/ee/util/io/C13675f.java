@@ -912,7 +912,7 @@ public class C13675f {
             C13479a.m54775e("FileUtils", "getFileName failed because baseApplication is null");
             return "";
         }
-        String a = LarkUriUtil.m95300a(C13615c.f35773a, Uri.parse(str));
+        String a = LarkUriUtil.get_filename_from_URI_rn_(C13615c.f35773a, Uri.parse(str));
         if (a != null) {
             return a;
         }
@@ -929,7 +929,7 @@ public class C13675f {
             C13479a.m54775e("FileUtils", "getFileLastAccessTime failed because baseApplication is null");
             return 0;
         }
-        Long c = LarkUriUtil.m95305c(C13615c.f35773a, Uri.parse(str));
+        Long c = LarkUriUtil.get_file_last_modified_from_URI_rn_(C13615c.f35773a, Uri.parse(str));
         if (c != null) {
             return c.longValue();
         }

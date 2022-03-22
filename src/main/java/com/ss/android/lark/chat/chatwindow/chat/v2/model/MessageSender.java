@@ -595,7 +595,7 @@ public final class MessageSender implements IMessageSender {
         Chat chat = this.f86150c;
         if (chat != null && (application = LarkContext.getApplication()) != null) {
             Application application2 = application;
-            String f = LarkUriUtil.m95310f(application2, uri);
+            String f = LarkUriUtil.get_mime_type_from_uri_rn_(application2, uri);
             Pair<String, Long> e = LarkUriUtil.m95308e(application2, uri);
             if (e != null) {
                 this.f86149b.mo121267b(((C29613e.C29615a) ((C29613e.C29615a) C29613e.m109504a().mo125332j(chat.getId())).mo125328c(chat.getLastMessagePosition() + 1)).mo106709g(UUID.randomUUID().toString()).mo106704b(e.component1()).mo106701a(FileState.UPLOADING).mo106699a(e.component2().longValue()).mo106706d(f).mo106700a(uri).mo106703a(), new AuditedMessageSendCallback(this));

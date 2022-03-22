@@ -119,7 +119,7 @@ public class MailAttachment implements Parcelable {
 
     /* renamed from: r */
     public String mo151242r() {
-        return C26311p.m95280b(C43785p.m173544b(this.f106785a));
+        return C26311p.get_mime_type_from_file_extension_rn_(C43785p.m173544b(this.f106785a));
     }
 
     /* renamed from: t */

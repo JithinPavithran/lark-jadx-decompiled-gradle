@@ -7,8 +7,8 @@ import com.larksuite.framework.utils.LarkUriUtil;
 /* renamed from: com.ss.android.lark.share.impl.systemshare.d */
 public class C54767d {
     /* renamed from: a */
-    public static boolean m212499a(Context context, Uri uri) {
-        String f = LarkUriUtil.m95310f(context, uri);
+    public static boolean if_URI_has_image_MIME_type_rn_(Context context, Uri uri) {
+        String f = LarkUriUtil.get_mime_type_from_uri_rn_(context, uri);
         if (f != null) {
             return f.contains("image/");
         }
@@ -16,8 +16,8 @@ public class C54767d {
     }
 
     /* renamed from: b */
-    public static boolean m212500b(Context context, Uri uri) {
-        String f = LarkUriUtil.m95310f(context, uri);
+    public static boolean if_URI_has_video_MIME_type_rn_(Context context, Uri uri) {
+        String f = LarkUriUtil.get_mime_type_from_uri_rn_(context, uri);
         if (f != null) {
             return f.contains("video/");
         }

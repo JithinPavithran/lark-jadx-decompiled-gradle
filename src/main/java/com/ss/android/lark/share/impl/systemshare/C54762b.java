@@ -59,12 +59,12 @@ public class C54762b extends AbstractC54723a {
 
     /* renamed from: f */
     private void m212485f(Intent intent) {
-        m212477a(m212490k(intent));
+        m212477a(construct_commonShareData_from_intent_rn_(intent));
     }
 
     /* renamed from: g */
     private void m212486g(Intent intent) {
-        m212477a(m212490k(intent));
+        m212477a(construct_commonShareData_from_intent_rn_(intent));
     }
 
     /* access modifiers changed from: protected */
@@ -104,7 +104,7 @@ public class C54762b extends AbstractC54723a {
             return false;
         }
         for (Uri uri : list) {
-            if (!C54767d.m212499a(f135234d, uri)) {
+            if (!C54767d.if_URI_has_image_MIME_type_rn_(f135234d, uri)) {
                 return true;
             }
         }
@@ -113,7 +113,7 @@ public class C54762b extends AbstractC54723a {
 
     /* renamed from: e */
     private void m212484e(Intent intent) {
-        CommonShareData k = m212490k(intent);
+        CommonShareData k = construct_commonShareData_from_intent_rn_(intent);
         if (mo186863b() != null) {
             C54713a.m212321a().mo178390c().mo178397b(f135234d, k, !this.f135235e.mo178410a(mo186863b()));
         }
@@ -139,7 +139,7 @@ public class C54762b extends AbstractC54723a {
         systemShareData.setContent(intent.getStringExtra("android.intent.extra.TEXT"));
         systemShareData.setSource(intent.getStringExtra("android.intent.extra.USER"));
         systemShareData.setLocalShare(intent.getBooleanExtra("android.intent.extra.LOCAL_ONLY", false));
-        ArrayList<Uri> l = m212491l(intent);
+        ArrayList<Uri> l = get_list_of_URIs_from_intent_rn_(intent);
         systemShareData.setFileUris(l);
         if (!CollectionUtils.isEmpty(l)) {
             systemShareData.setContent("");
@@ -148,7 +148,7 @@ public class C54762b extends AbstractC54723a {
     }
 
     /* renamed from: l */
-    private ArrayList<Uri> m212491l(Intent intent) {
+    private ArrayList<Uri> get_list_of_URIs_from_intent_rn_(Intent intent) {
         Uri data;
         ArrayList<Uri> arrayList = new ArrayList<>();
         if (intent == null) {
@@ -180,7 +180,12 @@ public class C54762b extends AbstractC54723a {
     }
 
     /* renamed from: a */
-    private boolean m212479a(Uri uri) {
+    /*
+     * if canonical path of uri contains
+     *      "/data/data/" or "/data/user"     and      "/com.larksuite.suite/" or "/com.larksuite.suite-"
+     * return true
+     */
+    private boolean if_uri_points_to_larks_files_rn_(Uri uri) {
         Context context = f135234d;
         File a = UriCompatUtil.m95039a(context, uri);
         if (a == null) {
@@ -223,7 +228,7 @@ public class C54762b extends AbstractC54723a {
                         }
                     }
                 }
-                if (m212479a(next)) {
+                if (if_uri_points_to_larks_files_rn_(next)) {
                     Toast.makeText(f135234d, (int) R.string.Lark_Legacy_ShareUnsupportTypeError, 0).show();
                     mo186861a();
                     return;
@@ -235,7 +240,7 @@ public class C54762b extends AbstractC54723a {
     }
 
     /* renamed from: k */
-    private CommonShareData m212490k(Intent intent) {
+    private CommonShareData construct_commonShareData_from_intent_rn_(Intent intent) {
         CommonShareData commonShareData = new CommonShareData();
         if (intent == null) {
             return commonShareData;
@@ -245,24 +250,24 @@ public class C54762b extends AbstractC54723a {
         commonShareData.setSource(intent.getStringExtra("android.intent.extra.USER"));
         commonShareData.setLocalShare(intent.getBooleanExtra("android.intent.extra.LOCAL_ONLY", false));
         commonShareData.setShareFileScene(1);
-        ArrayList<Uri> l = m212491l(intent);
+        ArrayList<Uri> l = get_list_of_URIs_from_intent_rn_(intent);
         if (CollectionUtils.isEmpty(l)) {
             return commonShareData;
         }
-        ArrayList arrayList = new ArrayList();
-        ArrayList arrayList2 = new ArrayList();
+        ArrayList image_URI_list = new ArrayList();
+        ArrayList non_image_URI_list = new ArrayList();
         Iterator<Uri> it = l.iterator();
         while (it.hasNext()) {
             Uri next = it.next();
             String uri = next.toString();
-            if (C54767d.m212499a(f135234d, next)) {
-                arrayList.add(uri);
+            if (C54767d.if_URI_has_image_MIME_type_rn_(f135234d, next)) {
+                image_URI_list.add(uri);
             } else {
-                arrayList2.add(uri);
+                non_image_URI_list.add(uri);
             }
         }
-        commonShareData.setImages(arrayList);
-        commonShareData.setFiles(arrayList2);
+        commonShareData.setImages(image_URI_list);
+        commonShareData.setFiles(non_image_URI_list);
         Log.m165389i("LarkShareHandler", "title:" + commonShareData.getTitle() + ", content:" + commonShareData.getContent() + ", source:" + commonShareData.getSource() + ", imageCount:" + commonShareData.getImages().size() + ", fileCount:" + commonShareData.getFiles().size());
         for (String str : commonShareData.getImages()) {
             Log.m165389i("LarkShareHandler", str);
@@ -275,7 +280,10 @@ public class C54762b extends AbstractC54723a {
 
     @Override // com.ss.android.lark.share.impl.AbstractC54744b
     /* renamed from: c */
-    public void mo186867c(Intent intent) {
+    /*
+     * This class looks like the logic for handling the intents received by SharActivity
+     */
+    public void handle_intent_action_rn_(Intent intent) {
         if (TextUtils.isEmpty(this.f135236f)) {
             mo186861a();
         } else if ("com.lark.android.action.SEND".equals(this.f135146c)) {
@@ -292,10 +300,24 @@ public class C54762b extends AbstractC54723a {
             m212487h(intent);
         } else if ("android.intent.action.VIEW".equals(this.f135146c) && "application/pdf".equalsIgnoreCase(this.f135236f)) {
             m212487h(intent);
-        } else if (!"android.intent.action.VIEW".equals(this.f135146c) || !"message/rfc822".equalsIgnoreCase(this.f135236f)) {
-            m212483d();
-        } else {
+//        } else if (!"android.intent.action.VIEW".equals(this.f135146c) || !"message/rfc822".equalsIgnoreCase(this.f135236f)) {
+//            /*    v ~e
+//             *   ~v ~e
+//             *   ~v  e
+//             */
+//            m212483d();
+//        } else {
+//            /*   v  e
+//             */
+//            m212488i(intent);
+//        }
+        /*
+         * above logic rewritten
+         */
+        } else if ("android.intent.action.VIEW".equals(this.f135146c) && "message/rfc822".equalsIgnoreCase(this.f135236f)) {
             m212488i(intent);
+        } else {
+            m212483d();
         }
     }
 
@@ -336,7 +358,7 @@ public class C54762b extends AbstractC54723a {
             return false;
         }
         for (Uri uri : list) {
-            if (C54767d.m212499a(f135234d, uri)) {
+            if (C54767d.if_URI_has_image_MIME_type_rn_(f135234d, uri)) {
                 return true;
             }
         }

@@ -164,7 +164,7 @@ public abstract class BaseChooseMediaPlugin<Req extends BaseRequest, Res extends
 
     /* access modifiers changed from: protected */
     public C41405a saveFile(File file, boolean z) throws IOException {
-        return saveFile(file, z, C69104g.m265935d(file));
+        return saveFile(file, z, C69104g.get_file_extension_rn_(file));
     }
 
     /* access modifiers changed from: protected */

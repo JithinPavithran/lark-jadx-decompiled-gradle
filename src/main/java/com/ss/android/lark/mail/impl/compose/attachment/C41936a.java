@@ -36,7 +36,7 @@ public class C41936a extends AbstractC42000a<LocalAttachment> {
         ((LocalAttachment) this.f106602j).mo151226d(str);
         ((LocalAttachment) this.f106602j).mo151218a(j);
         if (this.f106597e != null) {
-            String a = LarkUriUtil.m95300a(C41816b.m166115a().mo150132b(), this.f106597e);
+            String a = LarkUriUtil.get_filename_from_URI_rn_(C41816b.m166115a().mo150132b(), this.f106597e);
             if (!TextUtils.isEmpty(a)) {
                 ((LocalAttachment) this.f106602j).mo151222b(a);
             }

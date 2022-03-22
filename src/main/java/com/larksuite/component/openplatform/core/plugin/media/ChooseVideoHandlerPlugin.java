@@ -97,7 +97,7 @@ public class ChooseVideoHandlerPlugin extends OPPlugin {
                 try {
                     File file = new File(str);
                     TTFile gVar = TTFile.f171100b;
-                    TTFile a = gVar.mo235646a(System.currentTimeMillis() + "." + C69104g.m265935d(file));
+                    TTFile a = gVar.mo235646a(System.currentTimeMillis() + "." + C69104g.get_file_extension_rn_(file));
                     ((AbstractC67722a) ChooseVideoHandlerPlugin.this.getAppContext().findServiceByInterface(AbstractC67722a.class)).mo235605a(file, a, new TTFileContext(ChooseVideoHandlerPlugin.this.mLKEvent.mo92134c().mo92188a(), ChooseVideoHandlerPlugin.this.mLKEvent.mo92146m()));
                     MediaMetadataRetriever mediaMetadataRetriever = new MediaMetadataRetriever();
                     mediaMetadataRetriever.setDataSource(str);
