@@ -4,7 +4,7 @@ import android.content.Context;
 import com.bytedance.ee.bear.contract.ConnectionService;
 import com.bytedance.ee.bear.p276c.C4969a;
 import com.bytedance.ee.bear.thread.C11674a;
-import com.bytedance.ee.eenet.httpclient.AbstractC12625f;
+import com.bytedance.ee.eenet.httpclient.Abstract_ByteDance_OkHttp3_Client_rn_;
 import com.bytedance.ee.eenet.httpclient.C12617b;
 import com.huawei.hms.android.HwBuildEx;
 import java.util.concurrent.ExecutorService;
@@ -15,7 +15,7 @@ import okhttp3.Dispatcher;
 public class C5904b {
 
     /* renamed from: a */
-    private static AbstractC12625f f16534a;
+    private static Abstract_ByteDance_OkHttp3_Client_rn_ f16534a;
 
     /* renamed from: b */
     private final Context f16535b;
@@ -39,7 +39,7 @@ public class C5904b {
     }
 
     /* renamed from: a */
-    public AbstractC12625f mo23870a() {
+    public Abstract_ByteDance_OkHttp3_Client_rn_ mo23870a() {
         if (f16534a == null) {
             ExecutorService b = new C11674a().mo44758b("fetch");
             this.f16537d = new C5913h(C4969a.m20606a());

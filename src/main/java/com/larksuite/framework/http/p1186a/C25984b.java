@@ -2,7 +2,7 @@ package com.larksuite.framework.http.p1186a;
 
 import android.text.TextUtils;
 import com.larksuite.framework.http.p1188c.AbstractC25998b;
-import com.larksuite.framework.http.request.C26010a;
+import com.larksuite.framework.http.request.Http_Request_rn_;
 import com.larksuite.framework.http.response.AbstractC26016b;
 import com.larksuite.framework.http.response.BaseResponse;
 import com.larksuite.framework.http.response.ErrorResult;
@@ -53,22 +53,22 @@ public class C25984b {
     }
 
     /* renamed from: a */
-    public static String m94074a(C26010a aVar, String str) {
+    public static String m94074a(Http_Request_rn_ aVar, String str) {
         if (aVar == null) {
             return str;
         }
-        String str2 = aVar.mo92486h().get("X-BaseRequest-ID");
-        String c = aVar.mo92480c();
+        String str2 = aVar.get_headers_rn_().get("X-BaseRequest-ID");
+        String c = aVar.get_url_with_parameters_rn_();
         return "X-BaseRequest-ID" + str2 + ", " + "url:" + c + ", " + "responseBody:" + str;
     }
 
     /* renamed from: a */
-    public static void m94076a(C26010a aVar, int i, String str) {
+    public static void m94076a(Http_Request_rn_ aVar, int i, String str) {
         StringBuilder sb = new StringBuilder("X-BaseRequest-ID");
         sb.append(":");
-        sb.append(aVar.mo92486h().get("X-BaseRequest-ID"));
+        sb.append(aVar.get_headers_rn_().get("X-BaseRequest-ID"));
         sb.append(", request url:");
-        sb.append(aVar.mo92480c());
+        sb.append(aVar.get_url_with_parameters_rn_());
         sb.append(", statusCode:" + i);
         if (str == null) {
             Log.m165389i(aVar.mo92485g(), sb.toString());
@@ -78,7 +78,7 @@ public class C25984b {
     }
 
     /* renamed from: a */
-    public static <T> C25986a<T> m94073a(Class<T> cls, String str, C26010a<T> aVar, final Response response) {
+    public static <T> C25986a<T> m94073a(Class<T> cls, String str, Http_Request_rn_<T> aVar, final Response response) {
         ErrorResult a;
         int code = response.code();
         BaseResponse baseResponse = new BaseResponse(response.code(), m94075a(response), new BaseResponse.AbstractC26013a() {
@@ -106,7 +106,7 @@ public class C25984b {
         if (j != null && (a = j.mo92520a(str, baseResponse)) != null) {
             return new C25986a<>(a);
         }
-        if (code < C25987c.f64335a || code >= C25987c.f64338d) {
+        if (code < Http_Response_Status_rn_.f64335a || code >= Http_Response_Status_rn_.f64338d) {
             String str2 = null;
             try {
                 str2 = baseResponse.message();

@@ -22,7 +22,6 @@ import com.ss.android.lark.biz.im.api.FeedCard;
 import com.ss.android.lark.chat.entity.chat.Chat;
 import com.ss.android.lark.desktopmode.utils.DesktopUtil;
 import com.ss.android.lark.feed.app.conversationbox.C37431b;
-import com.ss.android.lark.feed.app.conversationbox.mvp.AbstractC37475c;
 import com.ss.android.lark.feed.app.entity.ChatFeedPreview;
 import com.ss.android.lark.feed.app.entity.FeedPreview;
 import com.ss.android.lark.feed.app.entity.LittleAppFeedPreview;
@@ -34,7 +33,7 @@ import com.ss.android.lark.feed.app.view.FeedListAdapter;
 import com.ss.android.lark.feed.p1847a.C37266b;
 import com.ss.android.lark.feed.p1847a.C37268c;
 import com.ss.android.lark.log.Log;
-import com.ss.android.lark.monitor.p2372a.C48211b;
+import com.ss.android.lark.monitor.p2372a.__monitor_C48211b_rn_;
 import com.ss.android.lark.ui.CommonTitleBar;
 import com.ss.android.lark.utils.UIHelper;
 import com.ss.android.lark.widget.recyclerview.C58996h;
@@ -359,7 +358,7 @@ public class ConversationBoxView implements AbstractC37475c.AbstractC37478b {
                 return false;
             }
         });
-        C48211b.m190251a().mo168687a(this.mBoxFeedRV);
+        __monitor_C48211b_rn_.monitor_m190251a_rn_().mo168687a(this.mBoxFeedRV);
     }
 
     /* renamed from: a */

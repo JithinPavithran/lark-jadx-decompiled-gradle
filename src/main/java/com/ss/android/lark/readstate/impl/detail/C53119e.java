@@ -8,9 +8,7 @@ import com.larksuite.framework.mvp.BasePresenter;
 import com.larksuite.framework.thread.CoreThreadPool;
 import com.larksuite.suite.R;
 import com.ss.android.lark.log.Log;
-import com.ss.android.lark.monitor.p2372a.C48211b;
-import com.ss.android.lark.readstate.impl.detail.C53111a;
-import com.ss.android.lark.readstate.impl.detail.C53119e;
+import com.ss.android.lark.monitor.p2372a.__monitor_C48211b_rn_;
 import com.ss.android.lark.readstate.impl.detail.vo.SearchReadStateResult;
 import com.ss.android.lark.readstate.impl.detail.vo.ShowReadStateResult;
 import com.ss.android.lark.utils.UIHelper;
@@ -100,8 +98,8 @@ public class C53119e extends BasePresenter<C53111a.AbstractC53112a, C53111a.Abst
             /* renamed from: a */
             public void onSuccess(ShowReadStateResult bVar) {
                 ((C53111a.AbstractC53113b) C53119e.this.getView()).mo181408a(bVar);
-                C48211b.m190251a().mo168691c("Init MVP");
-                C48211b.m190251a().mo168692d();
+                __monitor_C48211b_rn_.monitor_m190251a_rn_().monitor_mo168691c_rn_("Init MVP");
+                __monitor_C48211b_rn_.monitor_m190251a_rn_().mo168692d();
             }
 
             @Override // com.larksuite.framework.callback.IGetDataCallback
@@ -109,8 +107,8 @@ public class C53119e extends BasePresenter<C53111a.AbstractC53112a, C53111a.Abst
                 Log.m165382e(errorResult.toString());
                 ((C53111a.AbstractC53113b) C53119e.this.getView()).mo181405a();
                 ((C53111a.AbstractC53113b) C53119e.this.getView()).mo181409a(UIHelper.getString(R.string.Lark_Legacy_GetMessageReadstateFail));
-                C48211b.m190251a().mo168691c("Init MVP");
-                C48211b.m190251a().mo168692d();
+                __monitor_C48211b_rn_.monitor_m190251a_rn_().monitor_mo168691c_rn_("Init MVP");
+                __monitor_C48211b_rn_.monitor_m190251a_rn_().mo168692d();
             }
         }));
     }

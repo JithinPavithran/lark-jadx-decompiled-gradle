@@ -6,13 +6,13 @@ import java.util.Map;
 import java.util.regex.Pattern;
 
 /* renamed from: com.larksuite.framework.http.f.e */
-public class C26007e {
+public class URL_Parameter_Add_rn_ {
 
     /* renamed from: a */
-    private static Pattern f64365a = Pattern.compile("^([hH][tT]{2}[pP]:/*|[hH][tT]{2}[pP][sS]:/*|[fF][iI][lL][eE]:/*)([\\w.]+\\/?)\\S*");
+    private static Pattern __unused_f64365a_rn_ = Pattern.compile("^([hH][tT]{2}[pP]:/*|[hH][tT]{2}[pP][sS]:/*|[fF][iI][lL][eE]:/*)([\\w.]+\\/?)\\S*");
 
     /* renamed from: a */
-    public static String m94129a(String str, Map<String, String> map) {
+    public static String add_parameters_to_URL_rn_(String str, Map<String, String> map) {
         if (TextUtils.isEmpty(str) || map == null || map.size() <= 0) {
             return str;
         }

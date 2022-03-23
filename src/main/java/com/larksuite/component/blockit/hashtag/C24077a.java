@@ -24,7 +24,7 @@ import com.larksuite.component.blockit.p1067b.C24050a;
 import com.larksuite.component.blockit.props.C24137g;
 import com.larksuite.framework.callback.IGetDataCallback;
 import com.larksuite.framework.http.request.AbstractC26011b;
-import com.larksuite.framework.http.request.C26010a;
+import com.larksuite.framework.http.request.Http_Request_rn_;
 import com.larksuite.framework.http.request.HttpMethod;
 import com.larksuite.framework.http.request.RequestBody;
 import com.larksuite.framework.http.response.BaseResponse;
@@ -104,7 +104,7 @@ public class C24077a {
     private void m87927a(final String str, BatchTagActionRequest batchTagActionRequest, final IGetDataCallback<BatchTagActionResponse> iGetDataCallback) {
         Log.m165389i("HashTagService", "batchTagAction: " + str);
         String jSONString = JSONObject.toJSONString(batchTagActionRequest);
-        new C26010a(HttpMethod.POST, m87928b() + "/api/BatchTagAction").mo92471a(RequestBody.create("application/json", jSONString)).mo92468a(C24050a.m87869d()).mo92475a(new AbstractC26011b<BaseResponse>() {
+        new Http_Request_rn_(HttpMethod.POST, m87928b() + "/api/BatchTagAction").set_request_body_rn_(RequestBody.create("application/json", jSONString)).set_http_headers_rn_(C24050a.m87869d()).mo92475a(new AbstractC26011b<BaseResponse>() {
             /* class com.larksuite.component.blockit.hashtag.C24077a.C240803 */
 
             @Override // com.larksuite.framework.http.request.AbstractC26011b
@@ -157,7 +157,7 @@ public class C24077a {
         searchTagViewRequest.name = str2;
         searchTagViewRequest.isPreciseSearch = false;
         String jSONString = JSONObject.toJSONString(searchTagViewRequest);
-        new C26010a(HttpMethod.POST, m87928b() + "/api/SearchTagView").mo92471a(RequestBody.create("application/json", jSONString)).mo92468a(C24050a.m87869d()).mo92475a(new AbstractC26011b<BaseResponse>() {
+        new Http_Request_rn_(HttpMethod.POST, m87928b() + "/api/SearchTagView").set_request_body_rn_(RequestBody.create("application/json", jSONString)).set_http_headers_rn_(C24050a.m87869d()).mo92475a(new AbstractC26011b<BaseResponse>() {
             /* class com.larksuite.component.blockit.hashtag.C24077a.C240825 */
 
             @Override // com.larksuite.framework.http.request.AbstractC26011b
@@ -209,7 +209,7 @@ public class C24077a {
         searchTagsRequest.tagName = str2;
         searchTagsRequest.isPreciseSearch = false;
         String jSONString = JSONObject.toJSONString(searchTagsRequest);
-        new C26010a(HttpMethod.POST, m87928b() + "/api/SearchTags").mo92471a(RequestBody.create("application/json", jSONString)).mo92468a(C24050a.m87869d()).mo92475a(new AbstractC26011b<BaseResponse>() {
+        new Http_Request_rn_(HttpMethod.POST, m87928b() + "/api/SearchTags").set_request_body_rn_(RequestBody.create("application/json", jSONString)).set_http_headers_rn_(C24050a.m87869d()).mo92475a(new AbstractC26011b<BaseResponse>() {
             /* class com.larksuite.component.blockit.hashtag.C24077a.C240814 */
 
             @Override // com.larksuite.framework.http.request.AbstractC26011b
@@ -281,7 +281,7 @@ public class C24077a {
         createTagAndAddItemRequest.permissionType = TagPermissionType.Private.value();
         createTagAndAddItemRequest.scene = TagScene.Default.value();
         String jSONString = JSONObject.toJSONString(createTagAndAddItemRequest);
-        new C26010a(HttpMethod.POST, m87928b() + "/api/CreateTagAndAddItem").mo92471a(RequestBody.create("application/json", jSONString)).mo92468a(C24050a.m87869d()).mo92475a(new AbstractC26011b<BaseResponse>() {
+        new Http_Request_rn_(HttpMethod.POST, m87928b() + "/api/CreateTagAndAddItem").set_request_body_rn_(RequestBody.create("application/json", jSONString)).set_http_headers_rn_(C24050a.m87869d()).mo92475a(new AbstractC26011b<BaseResponse>() {
             /* class com.larksuite.component.blockit.hashtag.C24077a.C240792 */
 
             @Override // com.larksuite.framework.http.request.AbstractC26011b
@@ -353,7 +353,7 @@ public class C24077a {
         batchGetItemTagsRequest.context = str2;
         batchGetItemTagsRequest.needTeamworkerCount = true;
         String jSONString = JSONObject.toJSONString(batchGetItemTagsRequest);
-        new C26010a(HttpMethod.POST, m87928b() + "/api/BatchGetItemTags").mo92471a(RequestBody.create("application/json", jSONString)).mo92468a(C24050a.m87869d()).mo92475a(new AbstractC26011b<BaseResponse>() {
+        new Http_Request_rn_(HttpMethod.POST, m87928b() + "/api/BatchGetItemTags").set_request_body_rn_(RequestBody.create("application/json", jSONString)).set_http_headers_rn_(C24050a.m87869d()).mo92475a(new AbstractC26011b<BaseResponse>() {
             /* class com.larksuite.component.blockit.hashtag.C24077a.C240781 */
 
             @Override // com.larksuite.framework.http.request.AbstractC26011b

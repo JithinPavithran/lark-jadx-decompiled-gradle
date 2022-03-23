@@ -44,7 +44,7 @@ public class C38524k {
     }
 
     /* renamed from: a */
-    public static ForwardTemplate m151917a(Context context, ShareTextForwardData shareTextForwardData) {
+    public static ForwardTemplate create_ForwardTemplate_object_rn_(Context context, ShareTextForwardData shareTextForwardData) {
         ForwardTemplate.C38388a aVar = new ForwardTemplate.C38388a();
         aVar.mo140610a(new ForwardFeature.C38394a().mo140780e(shareTextForwardData.isSupportAdditionNote()).mo140777b());
         aVar.mo140615a(new ForwardViewDependency.C38404a().mo140891a(new BasicDialogContent.C38391a().mo140730a(shareTextForwardData.getTitle()).mo140735b(shareTextForwardData.getContent()).mo140732a()).mo140893a(shareTextForwardData.getTitleBarText()).mo140897b());

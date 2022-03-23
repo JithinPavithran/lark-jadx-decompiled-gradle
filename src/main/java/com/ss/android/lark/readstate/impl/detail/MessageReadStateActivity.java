@@ -11,7 +11,7 @@ import com.ss.android.lark.base.fragment.BaseFragmentActivity;
 import com.ss.android.lark.biz.core.api.ICoreApi;
 import com.ss.android.lark.dfcore.DynamicFeatureCore;
 import com.ss.android.lark.log.Log;
-import com.ss.android.lark.monitor.p2372a.C48211b;
+import com.ss.android.lark.monitor.p2372a.__monitor_C48211b_rn_;
 import com.ss.android.lark.utils.ApiUtils;
 import com.ss.android.lark.utils.C57824f;
 
@@ -68,7 +68,7 @@ public class MessageReadStateActivity extends BaseFragmentActivity {
 
     public void onWindowFocusChanged(boolean z) {
         super.onWindowFocusChanged(z);
-        C48211b.m190251a().mo168690c();
+        __monitor_C48211b_rn_.monitor_m190251a_rn_().mo168690c();
     }
 
     /* renamed from: a */

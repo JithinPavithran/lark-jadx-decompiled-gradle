@@ -1,7 +1,7 @@
 package com.ss.android.lark.platform.p2493n;
 
 import android.content.Context;
-import com.larksuite.framework.http.response.C26014a;
+import com.larksuite.framework.http.response.Cookie_Details_Container_rn_;
 import com.ss.android.lark.biz.core.api.resource.AbstractC29582d;
 import com.ss.android.lark.biz.core.api.resource.Resource;
 import com.ss.android.lark.core.C36083a;
@@ -105,10 +105,10 @@ public class C51854a {
             }
 
             /* renamed from: a */
-            private List<C26014a> m201099a(List<Cookie> list) {
+            private List<Cookie_Details_Container_rn_> m201099a(List<Cookie> list) {
                 ArrayList arrayList = new ArrayList();
                 for (Cookie cookie : list) {
-                    C26014a.C26015a aVar = new C26014a.C26015a();
+                    Cookie_Details_Container_rn_.C26015a aVar = new Cookie_Details_Container_rn_.C26015a();
                     aVar.mo92513a(cookie.name()).mo92515b(cookie.value()).mo92512a(cookie.expiresAt()).mo92517c(cookie.domain()).mo92518d(cookie.path());
                     if (cookie.secure()) {
                         aVar.mo92511a();
@@ -141,7 +141,7 @@ public class C51854a {
 
             @Override // com.ss.android.lark.image.p1959b.AbstractC38820a
             /* renamed from: a */
-            public List<C26014a> mo142258a(String str) {
+            public List<Cookie_Details_Container_rn_> mo142258a(String str) {
                 if (!C36083a.m141486a().getOpenPlatformDependency().mo133026a(context)) {
                     return C51864e.m201147a().mo92414a(str);
                 }

@@ -52,7 +52,7 @@ import com.bytedance.lark.pb.space.doc.v1.MGetDocFeedsRequest;
 import com.bytedance.lark.pb.space.doc.v1.MGetDocFeedsResponse;
 import com.larksuite.framework.callback.Entity.ErrorResult;
 import com.larksuite.framework.callback.IGetDataCallback;
-import com.larksuite.framework.http.p1191f.C26005c;
+import com.larksuite.framework.http.p1191f.URL_Domain_Parser_rn_;
 import com.larksuite.framework.thread.CoreThreadPool;
 import com.larksuite.framework.utils.C26252ad;
 import com.larksuite.framework.utils.C26284k;
@@ -702,7 +702,7 @@ public final class C39242e {
             C7804b.m31283a().mo17136c().mo17018a(C39347d.m155095a());
         }
         String c2 = fVar.mo30991c(c);
-        String b = C26005c.m94127b(c2);
+        String b = URL_Domain_Parser_rn_.get_host_from_URL_rn_(c2);
         ArrayList arrayList = new ArrayList();
         arrayList.add(b);
         arrayList.add(fVar.mo30988b());

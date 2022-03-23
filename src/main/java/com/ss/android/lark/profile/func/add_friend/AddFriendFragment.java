@@ -11,8 +11,7 @@ import com.larksuite.suite.R;
 import com.ss.android.lark.base.fragment.BaseFragment;
 import com.ss.android.lark.biz.core.api.ContactSource;
 import com.ss.android.lark.log.Log;
-import com.ss.android.lark.monitor.p2372a.C48211b;
-import com.ss.android.lark.profile.func.add_friend.AddFriendView;
+import com.ss.android.lark.monitor.p2372a.__monitor_C48211b_rn_;
 import com.ss.android.lark.profile.statistics.UserProfileHitPointV3;
 import java.io.Serializable;
 import java.util.HashMap;
@@ -174,13 +173,13 @@ public final class AddFriendFragment extends BaseFragment {
     @Override // com.ss.android.lark.desktopmode.p1787a.C36516a, androidx.fragment.app.Fragment
     public View onCreateView(LayoutInflater layoutInflater, ViewGroup viewGroup, Bundle bundle) {
         Intrinsics.checkParameterIsNotNull(layoutInflater, "inflater");
-        C48211b.m190251a().mo168689b("onCreateView");
+        __monitor_C48211b_rn_.monitor_m190251a_rn_().mo168689b("onCreateView");
         View inflate = layoutInflater.inflate(R.layout.activity_add_friend, viewGroup, false);
-        C48211b.m190251a().mo168691c("onCreateView");
-        C48211b.m190251a().mo168689b("initMVP");
+        __monitor_C48211b_rn_.monitor_m190251a_rn_().monitor_mo168691c_rn_("onCreateView");
+        __monitor_C48211b_rn_.monitor_m190251a_rn_().mo168689b("initMVP");
         Intrinsics.checkExpressionValueIsNotNull(inflate, "rootView");
         m202798a(inflate);
-        C48211b.m190251a().mo168691c("initMVP");
+        __monitor_C48211b_rn_.monitor_m190251a_rn_().monitor_mo168691c_rn_("initMVP");
         return inflate;
     }
 }

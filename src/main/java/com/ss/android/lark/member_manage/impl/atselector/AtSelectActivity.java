@@ -21,7 +21,7 @@ import com.ss.android.lark.member_manage.GroupMemberManageModule;
 import com.ss.android.lark.member_manage.impl.atselector.bean.AtSelectInitData;
 import com.ss.android.lark.member_manage.impl.atselector.view.AtView;
 import com.ss.android.lark.member_manage.impl.statistics.AtSelectPerceptionErrorCostTimeHitPoint;
-import com.ss.android.lark.monitor.p2372a.C48211b;
+import com.ss.android.lark.monitor.p2372a.__monitor_C48211b_rn_;
 import com.ss.android.lark.utils.ApiUtils;
 import com.ss.android.lark.utils.C57824f;
 import java.util.List;
@@ -142,7 +142,7 @@ public class AtSelectActivity extends BaseFragmentActivity {
 
     public void onWindowFocusChanged(boolean z) {
         super.onWindowFocusChanged(z);
-        C48211b.m190251a().mo168690c();
+        __monitor_C48211b_rn_.monitor_m190251a_rn_().mo168690c();
     }
 
     /* renamed from: a */
@@ -180,21 +180,21 @@ public class AtSelectActivity extends BaseFragmentActivity {
     public void onCreate(Bundle bundle) {
         super.onCreate(bundle);
         AtSelectPerceptionErrorCostTimeHitPoint.f114602a.mo159945h();
-        C48211b.m190252a("AtSelectActivity").mo168688b();
-        C48211b.m190251a().mo168689b("setContentView");
+        __monitor_C48211b_rn_.m190252a("AtSelectActivity").mo168688b();
+        __monitor_C48211b_rn_.monitor_m190251a_rn_().mo168689b("setContentView");
         setContentView(R.layout.activity_chat_at_select);
-        C48211b.m190251a().mo168691c("setContentView");
+        __monitor_C48211b_rn_.monitor_m190251a_rn_().monitor_mo168691c_rn_("setContentView");
         AtSelectInitData atSelectInitData = (AtSelectInitData) getIntent().getSerializableExtra("extra.init.data");
         if (atSelectInitData == null) {
             Log.m165382e("initData is null");
             finish();
             return;
         }
-        C48211b.m190251a().mo168689b("initPresenter");
+        __monitor_C48211b_rn_.monitor_m190251a_rn_().mo168689b("initPresenter");
         C44962a aVar = new C44962a(atSelectInitData, new AtView(this, this.f113847b));
         this.f113846a = aVar;
         aVar.create();
-        C48211b.m190251a().mo168691c("initPresenter");
+        __monitor_C48211b_rn_.monitor_m190251a_rn_().monitor_mo168691c_rn_("initPresenter");
     }
 
     /* renamed from: a */

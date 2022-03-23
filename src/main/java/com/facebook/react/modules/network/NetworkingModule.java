@@ -2,7 +2,7 @@ package com.facebook.react.modules.network;
 
 import android.net.Uri;
 import android.util.Base64;
-import com.bytedance.ee.eenet.httpclient.AbstractC12625f;
+import com.bytedance.ee.eenet.httpclient.Abstract_ByteDance_OkHttp3_Client_rn_;
 import com.bytedance.ee.eenet.httpclient.C12614a;
 import com.bytedance.ee.eenet.httpclient.C12617b;
 import com.facebook.common.logging.FLog;
@@ -46,7 +46,7 @@ import okio.C69705k;
 @ReactModule(name = "Networking")
 public final class NetworkingModule extends ReactContextBaseJavaModule {
     private static AbstractC21209a customClientBuilder;
-    public final AbstractC12625f mClient;
+    public final Abstract_ByteDance_OkHttp3_Client_rn_ mClient;
     private final C21217e mCookieHandler;
     private final AbstractC21213a mCookieJarContainer;
     private final String mDefaultUserAgent;
@@ -367,7 +367,7 @@ public final class NetworkingModule extends ReactContextBaseJavaModule {
                 a.addNetworkInterceptor(gVar.mo72070a());
             }
         }
-        AbstractC12625f a2 = C12617b.m52356a(a);
+        Abstract_ByteDance_OkHttp3_Client_rn_ a2 = C12617b.m52356a(a);
         this.mClient = a2;
         this.mCookieHandler = new C21217e(reactApplicationContext);
         this.mCookieJarContainer = (AbstractC21213a) a2.cookieJar();
@@ -438,7 +438,7 @@ public final class NetworkingModule extends ReactContextBaseJavaModule {
                 if (i2 != this.mClient.connectTimeoutMillis()) {
                     a.mo47915a((long) i2, TimeUnit.MILLISECONDS);
                 }
-                AbstractC12625f a2 = a.mo47919a();
+                Abstract_ByteDance_OkHttp3_Client_rn_ a2 = a.mo47919a();
                 Headers extractHeaders = extractHeaders(readableArray, readableMap);
                 if (extractHeaders == null) {
                     C21238p.m77023a(eventEmitter, i, "Unrecognized headers format", (Throwable) null);

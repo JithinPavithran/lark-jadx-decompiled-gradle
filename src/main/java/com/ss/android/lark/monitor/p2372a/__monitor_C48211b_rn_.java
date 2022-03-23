@@ -8,13 +8,13 @@ import com.ss.android.lark.log.Log;
 import com.ss.android.lark.monitor.AbstractC48230h;
 
 /* renamed from: com.ss.android.lark.monitor.a.b */
-public class C48211b {
+public class __monitor_C48211b_rn_ {
 
     /* renamed from: b */
-    private static C48211b f121326b;
+    private static __monitor_C48211b_rn_ f121326b;
 
     /* renamed from: c */
-    private static C48211b f121327c = new C48211b("");
+    private static __monitor_C48211b_rn_ f121327c = new __monitor_C48211b_rn_("");
 
     /* renamed from: d */
     private static AbstractC48230h f121328d = null;
@@ -45,9 +45,9 @@ public class C48211b {
     }
 
     /* renamed from: a */
-    public static synchronized C48211b m190251a() {
-        synchronized (C48211b.class) {
-            C48211b bVar = f121326b;
+    public static synchronized __monitor_C48211b_rn_ monitor_m190251a_rn_() {
+        synchronized (__monitor_C48211b_rn_.class) {
+            __monitor_C48211b_rn_ bVar = f121326b;
             if (bVar != null) {
                 return bVar;
             }
@@ -101,10 +101,10 @@ public class C48211b {
                 public boolean onPreDraw() {
                     C48212a.this.mo168694a();
                     String str = str;
-                    if (str == null || !str.equals(C48211b.m190251a().f121329a)) {
+                    if (str == null || !str.equals(__monitor_C48211b_rn_.monitor_m190251a_rn_().f121329a)) {
                         return true;
                     }
-                    C48211b.m190251a().mo168692d();
+                    __monitor_C48211b_rn_.monitor_m190251a_rn_().mo168692d();
                     return true;
                 }
             };
@@ -123,8 +123,8 @@ public class C48211b {
 
     /* renamed from: g */
     private static synchronized void m190255g() {
-        synchronized (C48211b.class) {
-            C48211b bVar = f121326b;
+        synchronized (__monitor_C48211b_rn_.class) {
+            __monitor_C48211b_rn_ bVar = f121326b;
             if (bVar != null) {
                 bVar.f121331f = null;
                 bVar.f121332g = null;
@@ -153,7 +153,7 @@ public class C48211b {
         }
     }
 
-    private C48211b(String str) {
+    private __monitor_C48211b_rn_(String str) {
         this.f121329a = str;
     }
 
@@ -170,7 +170,7 @@ public class C48211b {
     }
 
     /* renamed from: c */
-    public void mo168691c(String str) {
+    public void monitor_mo168691c_rn_(String str) {
         C3093c cVar = this.f121331f;
         if (cVar != null) {
             cVar.mo12974b(str);
@@ -182,13 +182,13 @@ public class C48211b {
     }
 
     /* renamed from: a */
-    public static synchronized C48211b m190252a(String str) {
-        C48211b bVar;
-        synchronized (C48211b.class) {
-            C48211b bVar2 = f121326b;
+    public static synchronized __monitor_C48211b_rn_ m190252a(String str) {
+        __monitor_C48211b_rn_ bVar;
+        synchronized (__monitor_C48211b_rn_.class) {
+            __monitor_C48211b_rn_ bVar2 = f121326b;
             if (bVar2 == null || !str.equals(bVar2.f121329a)) {
                 m190255g();
-                f121326b = new C48211b(str);
+                f121326b = new __monitor_C48211b_rn_(str);
             }
             bVar = f121326b;
         }

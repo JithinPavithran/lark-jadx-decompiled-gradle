@@ -18,12 +18,9 @@ import com.ss.android.lark.base.fragment.BaseFragment;
 import com.ss.android.lark.desktopmode.utils.DesktopUtil;
 import com.ss.android.lark.image.api.IRequestCreator;
 import com.ss.android.lark.log.Log;
-import com.ss.android.lark.monitor.p2372a.C48211b;
+import com.ss.android.lark.monitor.p2372a.__monitor_C48211b_rn_;
 import com.ss.android.lark.utils.C57759a;
 import com.ss.android.lark.widget.photo_picker.entity.PhotoItem;
-import com.ss.android.lark.widget.photo_picker.gallery.C58732b;
-import com.ss.android.lark.widget.photo_picker.gallery.C58742d;
-import com.ss.android.lark.widget.photo_picker.gallery.LargeImageView;
 import com.ss.android.lark.widget.photo_picker.p2948c.AbstractC58617a;
 import com.ss.android.lark.widget.photo_picker.statistics.PerfPhotoViewMonitor;
 import java.io.File;
@@ -198,7 +195,7 @@ public class C58734c extends BaseFragment implements AbstractC58617a {
                     C58734c.this.f145168c.setVisibility(8);
                     C58734c.this.f145168c = null;
                 }
-                C48211b.m190251a().mo168692d();
+                __monitor_C48211b_rn_.monitor_m190251a_rn_().mo168692d();
             }
 
             @Override // com.ss.android.lark.widget.photo_picker.gallery.LargeImageView.AbstractC58686c
@@ -247,12 +244,12 @@ public class C58734c extends BaseFragment implements AbstractC58617a {
     public void onViewCreated(View view, Bundle bundle) {
         super.onViewCreated(view, bundle);
         m227864a(this.mContext);
-        C48211b.m190251a().mo168691c("Gallery#onCreate");
+        __monitor_C48211b_rn_.monitor_m190251a_rn_().monitor_mo168691c_rn_("Gallery#onCreate");
     }
 
     @Override // com.ss.android.lark.desktopmode.p1787a.C36516a, androidx.fragment.app.Fragment
     public View onCreateView(LayoutInflater layoutInflater, ViewGroup viewGroup, Bundle bundle) {
-        C48211b.m190251a().mo168689b("Gallery#onCreate");
+        __monitor_C48211b_rn_.monitor_m190251a_rn_().mo168689b("Gallery#onCreate");
         final Context context = viewGroup.getContext();
         View inflate = layoutInflater.inflate(R.layout.image_gallery_layout, viewGroup, false);
         this.f145172g = inflate;

@@ -13,7 +13,7 @@ import com.ss.android.lark.base.fragment.BaseFragmentActivity;
 import com.ss.android.lark.biz.core.api.ICoreApi;
 import com.ss.android.lark.dfcore.DynamicFeatureCore;
 import com.ss.android.lark.log.Log;
-import com.ss.android.lark.monitor.p2372a.C48211b;
+import com.ss.android.lark.monitor.p2372a.__monitor_C48211b_rn_;
 import com.ss.android.lark.utils.ApiUtils;
 import com.ss.android.lark.utils.C57824f;
 
@@ -70,7 +70,7 @@ public class ConversationBoxActivity extends BaseFragmentActivity {
 
     public void onWindowFocusChanged(boolean z) {
         super.onWindowFocusChanged(z);
-        C48211b.m190251a().mo168690c();
+        __monitor_C48211b_rn_.monitor_m190251a_rn_().mo168690c();
     }
 
     /* renamed from: a */
@@ -106,7 +106,7 @@ public class ConversationBoxActivity extends BaseFragmentActivity {
     /* access modifiers changed from: protected */
     @Override // androidx.activity.ComponentActivity, androidx.core.app.ComponentActivity, androidx.appcompat.app.AppCompatActivity, androidx.fragment.app.FragmentActivity, com.larksuite.component.air.AirActivity, com.ss.android.lark.base.fragment.BaseFragmentActivity
     public void onCreate(Bundle bundle) {
-        C48211b.m190252a("ConversationBoxActivity").mo168688b();
+        __monitor_C48211b_rn_.m190252a("ConversationBoxActivity").mo168688b();
         super.onCreate(bundle);
         String stringExtra = getIntent().getStringExtra("parent_card_id");
         Log.m165389i("ConversationBoxActivity", "parent_card_id = " + stringExtra);
@@ -114,13 +114,13 @@ public class ConversationBoxActivity extends BaseFragmentActivity {
             finish();
             return;
         }
-        C48211b.m190251a().mo168689b("setUpFragment");
+        __monitor_C48211b_rn_.monitor_m190251a_rn_().mo168689b("setUpFragment");
         C37435d dVar = new C37435d();
         dVar.setArguments(getIntent().getExtras());
         FragmentTransaction beginTransaction = getSupportFragmentManager().beginTransaction();
         beginTransaction.add(16908290, dVar, (String) null);
         beginTransaction.commitNowAllowingStateLoss();
-        C48211b.m190251a().mo168691c("setUpFragment");
+        __monitor_C48211b_rn_.monitor_m190251a_rn_().monitor_mo168691c_rn_("setUpFragment");
     }
 
     /* renamed from: a */

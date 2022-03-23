@@ -6,7 +6,7 @@ import android.telephony.TelephonyManager;
 import androidx.core.app.ActivityCompat;
 import com.larksuite.framework.http.p1187b.AbstractC25990b;
 import com.larksuite.framework.http.request.AbstractC26011b;
-import com.larksuite.framework.http.request.C26010a;
+import com.larksuite.framework.http.request.Http_Request_rn_;
 import com.larksuite.framework.http.request.HttpMethod;
 import com.larksuite.framework.http.request.RequestBody;
 import com.larksuite.framework.http.response.BaseResponse;
@@ -174,8 +174,8 @@ public class C60785x {
     /* renamed from: a */
     public static void m236236a(String str, String str2) {
         AbstractC25990b httpClient = VideoChatModuleDependency.getDependency().getHttpClient();
-        C26010a aVar = new C26010a(HttpMethod.POST, str);
-        aVar.mo92476b(new RequestBody("application/x-www-form-urlencoded", str2));
+        Http_Request_rn_ aVar = new Http_Request_rn_(HttpMethod.POST, str);
+        aVar.set_POST_request_body_rn_(new RequestBody("application/x-www-form-urlencoded", str2));
         httpClient.mo92412a(aVar).mo92408a(new AbstractC26011b<BaseResponse>() {
             /* class com.ss.android.vc.common.p3083e.C60785x.C607861 */
 

@@ -39,7 +39,7 @@ public class C12617b {
     }
 
     /* renamed from: c */
-    public static AbstractC12625f m52365c() {
+    public static Abstract_ByteDance_OkHttp3_Client_rn_ m52365c() {
         m52358a();
         return f33793a.get();
     }
@@ -64,19 +64,19 @@ public class C12617b {
     }
 
     /* renamed from: a */
-    public static AbstractC12625f m52357a(OkHttpClient okHttpClient) {
+    public static Abstract_ByteDance_OkHttp3_Client_rn_ m52357a(OkHttpClient okHttpClient) {
         m52358a();
         return f33793a.get().mo47924b(okHttpClient);
     }
 
     /* renamed from: a */
-    public static AbstractC12625f m52356a(OkHttpClient.Builder builder) {
+    public static Abstract_ByteDance_OkHttp3_Client_rn_ m52356a(OkHttpClient.Builder builder) {
         m52358a();
         return f33793a.get().mo47924b(builder.build());
     }
 
     /* renamed from: b */
-    public static AbstractC12625f m52364b(OkHttpClient.Builder builder) {
+    public static Abstract_ByteDance_OkHttp3_Client_rn_ m52364b(OkHttpClient.Builder builder) {
         if (builder == null) {
             return new C12629i(new C12623e().mo47927a());
         }
@@ -84,7 +84,7 @@ public class C12617b {
     }
 
     /* renamed from: c */
-    public static AbstractC12625f m52366c(OkHttpClient.Builder builder) {
+    public static Abstract_ByteDance_OkHttp3_Client_rn_ m52366c(OkHttpClient.Builder builder) {
         if (builder == null) {
             return new C12628h(new C12623e().mo47927a());
         }
@@ -102,7 +102,7 @@ public class C12617b {
     }
 
     /* renamed from: b */
-    static AbstractC12625f m52363b(HttpChannel httpChannel) {
+    static Abstract_ByteDance_OkHttp3_Client_rn_ m52363b(HttpChannel httpChannel) {
         if (httpChannel == HttpChannel.RustChannel) {
             if (f33794b.get() == null) {
                 f33794b.compareAndSet(null, new C12629i(new C12623e().mo47927a()));

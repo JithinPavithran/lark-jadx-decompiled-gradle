@@ -10,10 +10,9 @@ import com.ss.android.lark.chat.entity.chat.Chat;
 import com.ss.android.lark.contact.C35358a;
 import com.ss.android.lark.contact.impl.contacts_group.AbstractC35602f;
 import com.ss.android.lark.contact.impl.contacts_group.ContactsMyGroupAdapter;
-import com.ss.android.lark.contact.impl.contacts_group.manage.AbstractC35623a;
 import com.ss.android.lark.contact.impl.statistics.ContactHitPoint;
 import com.ss.android.lark.desktopmode.utils.DesktopUtil;
-import com.ss.android.lark.monitor.p2372a.C48211b;
+import com.ss.android.lark.monitor.p2372a.__monitor_C48211b_rn_;
 import com.ss.android.lark.ui.p2892a.C57582a;
 import com.ss.android.lark.widget.ChatWindowPtrLoadingHeader;
 import com.ss.android.lark.widget.ptr.LKUIPtrClassicFrameLayout;
@@ -206,7 +205,7 @@ public class MyManageGroupView implements AbstractC35623a.AbstractC35625b {
             this.mEmptyLayout.setVisibility(8);
             this.f92114b.diff(list);
         }
-        C48211b.m190251a().mo168687a(this.mMyManageGroupRV);
+        __monitor_C48211b_rn_.monitor_m190251a_rn_().mo168687a(this.mMyManageGroupRV);
     }
 
     /* access modifiers changed from: public */

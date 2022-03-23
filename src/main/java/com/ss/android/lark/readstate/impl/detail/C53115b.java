@@ -11,8 +11,7 @@ import com.larksuite.suite.R;
 import com.ss.android.lark.base.fragment.BaseFragment;
 import com.ss.android.lark.chat.entity.message.Message;
 import com.ss.android.lark.log.Log;
-import com.ss.android.lark.monitor.p2372a.C48211b;
-import com.ss.android.lark.readstate.impl.detail.ReadStateDetailView;
+import com.ss.android.lark.monitor.p2372a.__monitor_C48211b_rn_;
 import com.ss.android.lark.statistics.Statistics;
 
 /* renamed from: com.ss.android.lark.readstate.impl.detail.b */
@@ -91,9 +90,9 @@ public class C53115b extends BaseFragment {
 
     @Override // com.ss.android.lark.desktopmode.p1787a.C36516a, androidx.fragment.app.Fragment
     public void onActivityCreated(Bundle bundle) {
-        C48211b.m190252a("MessageReadStateFragment").mo168688b();
+        __monitor_C48211b_rn_.m190252a("MessageReadStateFragment").mo168688b();
         super.onActivityCreated(null);
-        C48211b.m190251a().mo168689b("Init MVP");
+        __monitor_C48211b_rn_.monitor_m190251a_rn_().mo168689b("Init MVP");
         C53117c b = m205613b();
         if (b != null) {
             C53119e eVar = new C53119e(new C53118d(), new ReadStateDetailView(this.f131359b, this, b.f131365e, b.f131361a, b.f131363c, b.f131362b));

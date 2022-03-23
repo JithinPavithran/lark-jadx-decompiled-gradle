@@ -2,7 +2,7 @@ package com.bytedance.ee.bear.net;
 
 import android.os.SystemClock;
 import com.bytedance.ee.bear.thread.BearExecutors;
-import com.bytedance.ee.eenet.httpclient.AbstractC12625f;
+import com.bytedance.ee.eenet.httpclient.Abstract_ByteDance_OkHttp3_Client_rn_;
 import com.bytedance.ee.eenet.httpclient.C12614a;
 import com.bytedance.ee.eenet.httpclient.C12617b;
 import com.bytedance.ee.log.C13479a;
@@ -15,7 +15,7 @@ import okhttp3.Interceptor;
 public class C10291l {
 
     /* renamed from: a */
-    private AbstractC12625f f27775a;
+    private Abstract_ByteDance_OkHttp3_Client_rn_ f27775a;
 
     /* renamed from: b */
     private long f27776b;
@@ -30,9 +30,9 @@ public class C10291l {
     private CookieJar f27779e;
 
     /* renamed from: a */
-    public AbstractC12625f mo39306a() {
+    public Abstract_ByteDance_OkHttp3_Client_rn_ mo39306a() {
         synchronized (this) {
-            AbstractC12625f fVar = this.f27775a;
+            Abstract_ByteDance_OkHttp3_Client_rn_ fVar = this.f27775a;
             if (fVar != null) {
                 return fVar;
             }
@@ -44,7 +44,7 @@ public class C10291l {
     /* renamed from: b */
     private void m42898b() {
         C12617b.m52358a();
-        AbstractC12625f fVar = this.f27775a;
+        Abstract_ByteDance_OkHttp3_Client_rn_ fVar = this.f27775a;
         if (fVar == null) {
             fVar = C12617b.m52365c();
         }

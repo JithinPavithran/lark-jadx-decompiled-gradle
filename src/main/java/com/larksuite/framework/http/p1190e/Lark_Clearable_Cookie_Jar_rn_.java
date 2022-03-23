@@ -13,26 +13,26 @@ import okhttp3.Cookie;
 import okhttp3.HttpUrl;
 
 /* renamed from: com.larksuite.framework.http.e.a */
-public class C26001a implements ClearableCookieJar {
+public class Lark_Clearable_Cookie_Jar_rn_ implements ClearableCookieJar {
 
     /* renamed from: a */
     boolean f64359a;
 
     /* renamed from: b */
-    private Context f64360b;
+    private Context context_rn_;
 
     /* renamed from: c */
-    private CookieCache f64361c;
+    private CookieCache cookie_cache_rn_;
 
     /* renamed from: d */
-    private CookiePersistor f64362d;
+    private CookiePersistor cookie_persistor_rn_;
 
     @Override // com.franmontiel.persistentcookiejar.ClearableCookieJar
     /* renamed from: a */
     public synchronized void mo72355a() {
-        this.f64361c.mo72356a();
-        this.f64362d.mo72368b();
-        Log.m165389i("PersistentCookieJar", "clear process:" + C26252ad.m94992a(this.f64360b));
+        this.cookie_cache_rn_.mo72356a();
+        this.cookie_persistor_rn_.mo72368b();
+        Log.m165389i("PersistentCookieJar", "clear process:" + C26252ad.m94992a(this.context_rn_));
     }
 
     /* renamed from: a */
@@ -49,19 +49,19 @@ public class C26001a implements ClearableCookieJar {
     /* renamed from: a */
     private void m94111a(boolean z) {
         if (!this.f64359a) {
-            List<Cookie> a = this.f64362d.mo72366a();
+            List<Cookie> a = this.cookie_persistor_rn_.mo72366a();
             if (a == null || a.size() <= 0) {
                 Log.m165389i("PersistentCookieJar", "ensureLoaded failed");
                 return;
             }
             this.f64359a = true;
-            this.f64361c.mo72357a(a);
-            Log.m165388i("PersistentCookieJar ensureLoaded process:" + C26252ad.m94992a(this.f64360b));
+            this.cookie_cache_rn_.mo72357a(a);
+            Log.m165388i("PersistentCookieJar ensureLoaded process:" + C26252ad.m94992a(this.context_rn_));
         }
     }
 
     /* renamed from: a */
-    private static boolean m94112a(Cookie cookie) {
+    private static boolean is_expired_cookie_rn_(Cookie cookie) {
         if (cookie.expiresAt() < System.currentTimeMillis()) {
             return true;
         }
@@ -70,37 +70,37 @@ public class C26001a implements ClearableCookieJar {
 
     @Override // okhttp3.CookieJar
     public synchronized List<Cookie> loadForRequest(HttpUrl httpUrl) {
-        ArrayList arrayList;
-        ArrayList arrayList2 = new ArrayList();
-        arrayList = new ArrayList();
+        ArrayList cookies_for_the_URL_rn_;
+        ArrayList expired_cookies_rn_ = new ArrayList();
+        cookies_for_the_URL_rn_ = new ArrayList();
         m94111a(false);
-        Iterator it = this.f64361c.iterator();
+        Iterator it = this.cookie_cache_rn_.iterator();
         while (it.hasNext()) {
             Cookie cookie = (Cookie) it.next();
-            if (m94112a(cookie)) {
-                arrayList2.add(cookie);
+            if (is_expired_cookie_rn_(cookie)) {
+                expired_cookies_rn_.add(cookie);
                 it.remove();
                 m94110a(httpUrl, cookie, "PersistentCookieJar expiredcookie loadForRequest");
             } else if (cookie.matches(httpUrl)) {
-                arrayList.add(cookie);
+                cookies_for_the_URL_rn_.add(cookie);
             }
         }
-        this.f64362d.mo72369b(arrayList2);
+        this.cookie_persistor_rn_.mo72369b(expired_cookies_rn_);
         httpUrl.host();
-        return arrayList;
+        return cookies_for_the_URL_rn_;
     }
 
     @Override // okhttp3.CookieJar
     public synchronized void saveFromResponse(HttpUrl httpUrl, List<Cookie> list) {
-        this.f64361c.mo72357a(list);
-        this.f64362d.mo72367a(m94109a(list));
+        this.cookie_cache_rn_.mo72357a(list);
+        this.cookie_persistor_rn_.mo72367a(m94109a(list));
         httpUrl.host();
     }
 
-    public C26001a(Context context, CookieCache cookieCache, CookiePersistor cookiePersistor) {
-        this.f64360b = context;
-        this.f64361c = cookieCache;
-        this.f64362d = cookiePersistor;
+    public Lark_Clearable_Cookie_Jar_rn_(Context context, CookieCache cookieCache, CookiePersistor cookiePersistor) {
+        this.context_rn_ = context;
+        this.cookie_cache_rn_ = cookieCache;
+        this.cookie_persistor_rn_ = cookiePersistor;
     }
 
     /* renamed from: a */

@@ -1,9 +1,9 @@
 package com.bytedance.ee.eenet.util;
 
 /* renamed from: com.bytedance.ee.eenet.util.a */
-public class C12641a {
+public class __Assert_Not_Null_rn_ {
     /* renamed from: a */
-    public static void m52415a(Object obj) {
+    public static void __assert_not_null_rn_(Object obj) {
         if (obj == null) {
             throw new AssertionError("object is null");
         }

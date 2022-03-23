@@ -14,36 +14,36 @@ import java.util.Map;
 import okhttp3.Cookie;
 
 /* renamed from: com.larksuite.framework.http.e.b */
-public class C26002b implements CookiePersistor {
+public class Lark_Cookie_Persistor_rn_ implements CookiePersistor {
 
     /* renamed from: a */
-    private final SharedPreferences f64363a;
+    private final SharedPreferences shared_preferences_rn_;
 
     /* renamed from: b */
-    private Context f64364b;
+    private Context context_rn_;
 
     @Override // com.franmontiel.persistentcookiejar.persistence.CookiePersistor
     /* renamed from: b */
     public void mo72368b() {
-        Log.m165388i("clear!!!!-cookies in process " + C26252ad.m94992a(this.f64364b));
-        this.f64363a.edit().clear().commit();
+        Log.m165388i("clear!!!!-cookies in process " + C26252ad.m94992a(this.context_rn_));
+        this.shared_preferences_rn_.edit().clear().commit();
         Log.m165388i("clear!!!!-clear");
     }
 
     @Override // com.franmontiel.persistentcookiejar.persistence.CookiePersistor
     /* renamed from: a */
     public List<Cookie> mo72366a() {
-        Log.m165388i("loadAll!!!!-cookies in process " + C26252ad.m94992a(this.f64364b));
+        Log.m165388i("loadAll!!!!-cookies in process " + C26252ad.m94992a(this.context_rn_));
         ArrayList arrayList = new ArrayList();
-        m94115a(this.f64363a, arrayList);
+        m94115a(this.shared_preferences_rn_, arrayList);
         if (arrayList.isEmpty()) {
-            m94115a(this.f64364b.getSharedPreferences("CookiePersistence", 0), arrayList);
+            m94115a(this.context_rn_.getSharedPreferences("CookiePersistence", 0), arrayList);
         }
         Log.m165388i("loadAll!!!!-cookies");
         return arrayList;
     }
 
-    public C26002b(Context context) {
+    public Lark_Cookie_Persistor_rn_(Context context) {
         this(context, context.getSharedPreferences("CookiePersistence_" + C26252ad.m94992a(context), 0));
     }
 
@@ -68,12 +68,12 @@ public class C26002b implements CookiePersistor {
     @Override // com.franmontiel.persistentcookiejar.persistence.CookiePersistor
     /* renamed from: b */
     public void mo72369b(Collection<Cookie> collection) {
-        Log.m165388i("remove specified cookies in process " + C26252ad.m94992a(this.f64364b));
+        Log.m165388i("remove specified cookies in process " + C26252ad.m94992a(this.context_rn_));
         if (CollectionUtils.isEmpty(collection)) {
             Log.m165388i("no cookies in process");
             return;
         }
-        SharedPreferences.Editor edit = this.f64363a.edit();
+        SharedPreferences.Editor edit = this.shared_preferences_rn_.edit();
         for (Cookie cookie : collection) {
             edit.remove(m94114a(cookie));
         }
@@ -83,22 +83,22 @@ public class C26002b implements CookiePersistor {
     @Override // com.franmontiel.persistentcookiejar.persistence.CookiePersistor
     /* renamed from: a */
     public void mo72367a(Collection<Cookie> collection) {
-        Log.m165388i("saveAll!!!!-cookies in process " + C26252ad.m94992a(this.f64364b));
+        Log.m165388i("saveAll!!!!-cookies in process " + C26252ad.m94992a(this.context_rn_));
         if (CollectionUtils.isEmpty(collection)) {
             Log.m165388i("saveAll!!!!-cookies empty return");
             return;
         }
         Log.m165388i("saveAll!!!!-cookies");
-        SharedPreferences.Editor edit = this.f64363a.edit();
+        SharedPreferences.Editor edit = this.shared_preferences_rn_.edit();
         for (Cookie cookie : collection) {
             edit.putString(m94114a(cookie), new SerializableCookie().encode(cookie));
         }
         edit.commit();
     }
 
-    public C26002b(Context context, SharedPreferences sharedPreferences) {
-        this.f64364b = context;
-        this.f64363a = sharedPreferences;
+    public Lark_Cookie_Persistor_rn_(Context context, SharedPreferences sharedPreferences) {
+        this.context_rn_ = context;
+        this.shared_preferences_rn_ = sharedPreferences;
     }
 
     /* renamed from: a */

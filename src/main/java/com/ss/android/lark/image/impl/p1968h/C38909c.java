@@ -5,7 +5,7 @@ import com.bumptech.glide.load.DataSource;
 import com.bytedance.lark.sdk.LarkNet;
 import com.bytedance.lark.sdk.LarkRequest;
 import com.bytedance.lark.sdk.LarkResponse;
-import com.larksuite.framework.http.response.C26014a;
+import com.larksuite.framework.http.response.Cookie_Details_Container_rn_;
 import com.larksuite.framework.utils.C26266d;
 import com.larksuite.framework.utils.CollectionUtils;
 import com.ss.android.lark.image.C38792a;
@@ -67,14 +67,14 @@ public class C38909c implements AbstractC38809a<InputStream> {
     }
 
     /* renamed from: a */
-    private String m153586a(List<C26014a> list) {
+    private String m153586a(List<Cookie_Details_Container_rn_> list) {
         StringBuilder sb = new StringBuilder();
         int size = list.size();
         for (int i = 0; i < size; i++) {
             if (i > 0) {
                 sb.append("; ");
             }
-            C26014a aVar = list.get(i);
+            Cookie_Details_Container_rn_ aVar = list.get(i);
             sb.append(aVar.mo92502a());
             sb.append('=');
             sb.append(aVar.mo92503b());
@@ -139,7 +139,7 @@ public class C38909c implements AbstractC38809a<InputStream> {
         } else if (this.f99988b.regionMatches(true, 0, "wss:", 0, 4)) {
             str = "https:" + str.substring(4);
         }
-        List<C26014a> a = C38792a.m153106a().mo142258a(str);
+        List<Cookie_Details_Container_rn_> a = C38792a.m153106a().mo142258a(str);
         if (CollectionUtils.isNotEmpty(a)) {
             aVar.mo67093a("Cookie", m153586a(a));
         }

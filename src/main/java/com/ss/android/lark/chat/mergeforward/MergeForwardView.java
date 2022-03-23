@@ -25,8 +25,6 @@ import com.ss.android.lark.chat.chatwindow.chat.p1613b.p1615b.AbstractC33120i;
 import com.ss.android.lark.chat.entity.favorite.FavoriteMessageInfo;
 import com.ss.android.lark.chat.entity.message.Message;
 import com.ss.android.lark.chat.entity.message.MessageInfo;
-import com.ss.android.lark.chat.mergeforward.C34051a;
-import com.ss.android.lark.chat.mergeforward.MergeForwardView;
 import com.ss.android.lark.chat.p1660e.C33973b;
 import com.ss.android.lark.chat.utils.C34378x;
 import com.ss.android.lark.chat.vo.AbsMessageVO;
@@ -41,7 +39,7 @@ import com.ss.android.lark.dto.group.GroupRecallEntity;
 import com.ss.android.lark.log.Log;
 import com.ss.android.lark.mergeforward.AbstractC45276d;
 import com.ss.android.lark.mergeforward.C45272a;
-import com.ss.android.lark.monitor.p2372a.C48211b;
+import com.ss.android.lark.monitor.p2372a.__monitor_C48211b_rn_;
 import com.ss.android.lark.threadmergeforward.ThreadMergeForwardLauncher;
 import com.ss.android.lark.ui.CommonTitleBar;
 import com.ss.android.lark.ui.IActionTitlebar;
@@ -544,7 +542,7 @@ public class MergeForwardView implements C34051a.AbstractC34054b {
                 MergeForwardView.lambda$u8vKwUirNPoCDInUaxe55j0ko_M(MergeForwardView.this, f, f2);
             }
         });
-        C48211b.m190251a().mo168687a(this.mMessageRV);
+        __monitor_C48211b_rn_.monitor_m190251a_rn_().mo168687a(this.mMessageRV);
         this.mMessageRV.addOnScrollListener(new RecyclerViewScrollDetector() {
             /* class com.ss.android.lark.chat.mergeforward.MergeForwardView.C340404 */
 

@@ -138,7 +138,7 @@ public class C51798a {
                         builder.addHeader("X-SS-STUB", a4);
                         builder.addHeader("X-Sec-Captcha-Token", a5);
                     }
-                    Response execute = ((C25992c) this.f128744b).mo92424b().newCall(builder.url(a).post(build).build()).execute();
+                    Response execute = ((C25992c) this.f128744b).get_okhttp_client_rn_().newCall(builder.url(a).post(build).build()).execute();
                     if (execute == null) {
                         return null;
                     }

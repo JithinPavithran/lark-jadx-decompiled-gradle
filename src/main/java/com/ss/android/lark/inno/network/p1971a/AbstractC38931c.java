@@ -1,7 +1,7 @@
 package com.ss.android.lark.inno.network.p1971a;
 
 import com.larksuite.framework.http.request.AbstractC26011b;
-import com.larksuite.framework.http.request.C26010a;
+import com.larksuite.framework.http.request.Http_Request_rn_;
 import com.larksuite.framework.http.request.HttpMethod;
 import com.larksuite.framework.http.request.HttpParams;
 import com.larksuite.framework.http.request.RequestBody;
@@ -11,7 +11,7 @@ import java.util.Collections;
 import java.util.Map;
 
 /* renamed from: com.ss.android.lark.inno.network.a.c */
-public abstract class AbstractC38931c<T> extends C26010a<T> {
+public abstract class AbstractC38931c<T> extends Http_Request_rn_<T> {
 
     /* renamed from: a */
     protected String f100023a;
@@ -55,23 +55,23 @@ public abstract class AbstractC38931c<T> extends C26010a<T> {
         } else {
             httpMethod = HttpMethod.GET;
         }
-        mo92469a(httpMethod);
+        set_http_method_rn_(httpMethod);
         m153645p();
         if (!CollectionUtils.isEmpty(mo142529n())) {
             for (Map.Entry<String, String> entry : mo142529n().entrySet()) {
                 mo92473a(entry.getKey(), entry.getValue());
             }
         }
-        HttpParams i = mo92487i();
+        HttpParams i = get_http_params_rn_();
         if (!CollectionUtils.isEmpty(mo142528m())) {
             for (Map.Entry<String, String> entry2 : mo142528m().entrySet()) {
                 i.urlParamsMap.put(entry2.getKey(), entry2.getValue());
             }
         }
-        mo92470a(i);
+        set_http_parameters_rn_(i);
         RequestBody l = mo142527l();
         if (l != null) {
-            mo92476b(l);
+            set_POST_request_body_rn_(l);
         }
         return this;
     }

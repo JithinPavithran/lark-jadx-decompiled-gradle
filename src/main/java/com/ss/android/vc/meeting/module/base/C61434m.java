@@ -8,7 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewTreeObserver;
 import androidx.fragment.app.Fragment;
-import com.ss.android.lark.monitor.p2372a.C48211b;
+import com.ss.android.lark.monitor.p2372a.__monitor_C48211b_rn_;
 import com.ss.android.vc.common.p3077b.C60700b;
 import com.ss.android.vc.common.p3083e.C60773o;
 import com.ss.android.vc.common.permission.C60795b;
@@ -179,10 +179,10 @@ public class C61434m extends Fragment implements AbstractC61299g, AbstractC61653
         C68296b<Boolean> a = TimeConsumeUtils.m248927a("MeetingFragment@:onResume");
         if (this.f154065a != null) {
             String str = mo212968z() + "onResume";
-            C48211b.m190251a().mo168689b(str);
+            __monitor_C48211b_rn_.monitor_m190251a_rn_().mo168689b(str);
             mo212934m();
-            C48211b.m190251a().mo168691c(str);
-            C48211b.m190251a().mo168690c();
+            __monitor_C48211b_rn_.monitor_m190251a_rn_().monitor_mo168691c_rn_(str);
+            __monitor_C48211b_rn_.monitor_m190251a_rn_().mo168690c();
         }
         TimeConsumeUtils.m248928a(a);
     }
@@ -193,9 +193,9 @@ public class C61434m extends Fragment implements AbstractC61299g, AbstractC61653
         C68296b<Boolean> a = TimeConsumeUtils.m248927a("MeetingFragment@:onStart");
         if (this.f154065a != null) {
             String str = mo212968z() + "onStart";
-            C48211b.m190251a().mo168689b(str);
+            __monitor_C48211b_rn_.monitor_m190251a_rn_().mo168689b(str);
             mo212933l();
-            C48211b.m190251a().mo168691c(str);
+            __monitor_C48211b_rn_.monitor_m190251a_rn_().monitor_mo168691c_rn_(str);
         }
         TimeConsumeUtils.m248928a(a);
     }
@@ -225,9 +225,9 @@ public class C61434m extends Fragment implements AbstractC61299g, AbstractC61653
         C68296b<Boolean> a = TimeConsumeUtils.m248927a("MeetingFragment@:onCreate");
         if (this.f154065a != null) {
             String str = mo212968z() + "onCreate";
-            C48211b.m190251a().mo168689b(str);
+            __monitor_C48211b_rn_.monitor_m190251a_rn_().mo168689b(str);
             mo212927a(bundle);
-            C48211b.m190251a().mo168691c(str);
+            __monitor_C48211b_rn_.monitor_m190251a_rn_().monitor_mo168691c_rn_(str);
         }
         TimeConsumeUtils.m248928a(a);
     }
@@ -251,9 +251,9 @@ public class C61434m extends Fragment implements AbstractC61299g, AbstractC61653
         this.f154065a = bw_;
         bw_.addMeetingListener(this);
         String str = mo212968z() + "onAttach";
-        C48211b.m190251a().mo168689b(str);
+        __monitor_C48211b_rn_.monitor_m190251a_rn_().mo168689b(str);
         mo212880a(context);
-        C48211b.m190251a().mo168691c(str);
+        __monitor_C48211b_rn_.monitor_m190251a_rn_().monitor_mo168691c_rn_(str);
         TimeConsumeUtils.m248928a(a);
     }
 
@@ -262,9 +262,9 @@ public class C61434m extends Fragment implements AbstractC61299g, AbstractC61653
         C68296b<Boolean> a = TimeConsumeUtils.m248927a("MeetingFragment@:onViewCreated");
         if (this.f154065a != null) {
             String str = mo212968z() + "onViewCreated";
-            C48211b.m190251a().mo168689b(str);
+            __monitor_C48211b_rn_.monitor_m190251a_rn_().mo168689b(str);
             a_(view, bundle);
-            C48211b.m190251a().mo168691c(str);
+            __monitor_C48211b_rn_.monitor_m190251a_rn_().monitor_mo168691c_rn_(str);
         } else {
             super.onViewCreated(view, bundle);
         }
@@ -291,10 +291,10 @@ public class C61434m extends Fragment implements AbstractC61299g, AbstractC61653
         }
         C68296b<Boolean> a = TimeConsumeUtils.m248927a("MeetingFragment@:onCreateView");
         String str = mo212968z() + "onCreateView";
-        C48211b.m190251a().mo168689b(str);
+        __monitor_C48211b_rn_.monitor_m190251a_rn_().mo168689b(str);
         View a2 = mo212879a(layoutInflater, viewGroup, bundle);
-        C48211b.m190251a().mo168691c(str);
-        C48211b.m190251a().mo168687a(a2);
+        __monitor_C48211b_rn_.monitor_m190251a_rn_().monitor_mo168691c_rn_(str);
+        __monitor_C48211b_rn_.monitor_m190251a_rn_().mo168687a(a2);
         TimeConsumeUtils.m248928a(a);
         return a2;
     }

@@ -9,12 +9,11 @@ import com.bytedance.ee.bear.drive.view.preview.ttreader.pdf.tron.loader.PDFPage
 import com.bytedance.ee.bear.drive.view.preview.ttreader.pdf.tron.p374a.C7463b;
 import com.bytedance.ee.bear.drive.view.preview.ttreader.pdf.tron.p374a.C7464d;
 import com.bytedance.ee.bear.facade.common.C7708g;
-import com.bytedance.ee.bear.facade.glide.C7769c;
 import com.bytedance.ee.bear.facade.glide.p383a.C7754c;
 import com.bytedance.ee.bear.facade.glide.p383a.C7766e;
 import com.bytedance.ee.bear.middleground.comment.p447e.C9213b;
 import com.bytedance.ee.bear.middleground.comment.p447e.C9215d;
-import com.bytedance.ee.eenet.httpclient.AbstractC12625f;
+import com.bytedance.ee.eenet.httpclient.Abstract_ByteDance_OkHttp3_Client_rn_;
 import com.bytedance.ee.eenet.httpclient.C12617b;
 import com.bytedance.ee.log.C13479a;
 import com.bytedance.ee.plugin.common.ttpdfreader.PagePart;
@@ -49,7 +48,7 @@ public class BearGlideModule extends AbstractC2102d {
             C13479a.m54764b("BearGlideModule", "dependency is dependency wrapper");
             aVar = new C7743a();
         }
-        AbstractC12625f a = C12617b.m52365c().mo47928a().mo47916a(new C13684a(aVar)).mo47919a();
+        Abstract_ByteDance_OkHttp3_Client_rn_ a = C12617b.m52365c().mo47928a().mo47916a(new C13684a(aVar)).mo47919a();
         registry.mo10310b(C13664a.class, InputStream.class, new C7769c.C7770a(a));
         registry.mo10310b(C7754c.class, InputStream.class, new C7766e.C7767a(a));
         registry.mo10310b(C9213b.class, InputStream.class, new C9215d.C9216a(a));

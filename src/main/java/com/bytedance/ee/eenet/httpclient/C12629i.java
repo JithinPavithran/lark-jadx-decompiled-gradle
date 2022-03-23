@@ -3,7 +3,7 @@ package com.bytedance.ee.eenet.httpclient;
 import com.bytedance.ee.eenet.httpclient.rust.C12630a;
 import com.bytedance.ee.eenet.httpclient.rust.C12635b;
 import com.bytedance.ee.eenet.httpclient.rust.p602b.C12638b;
-import com.bytedance.ee.eenet.util.C12641a;
+import com.bytedance.ee.eenet.util.__Assert_Not_Null_rn_;
 import com.bytedance.ee.log.C13479a;
 import java.util.List;
 import javax.net.SocketFactory;
@@ -20,7 +20,7 @@ import okhttp3.Protocol;
 import okhttp3.Request;
 
 /* renamed from: com.bytedance.ee.eenet.httpclient.i */
-public final class C12629i extends AbstractC12625f {
+public final class C12629i extends Abstract_ByteDance_OkHttp3_Client_rn_ {
 
     /* renamed from: c */
     protected C12630a f33831c;
@@ -107,17 +107,17 @@ public final class C12629i extends AbstractC12625f {
 
     @Override // com.bytedance.ee.eenet.httpclient.AbstractC12627g
     /* renamed from: b */
-    public AbstractC12625f mo47924b(OkHttpClient okHttpClient) {
+    public Abstract_ByteDance_OkHttp3_Client_rn_ mo47924b(OkHttpClient okHttpClient) {
         return new C12629i(okHttpClient);
     }
 
     C12629i(OkHttpClient okHttpClient) {
-        this.f33827a = okHttpClient.newBuilder().build();
+        this.okHttp_client_rn_n = okHttpClient.newBuilder().build();
     }
 
     @Override // okhttp3.OkHttpClient, okhttp3.Call.Factory
     public Call newCall(Request request) {
-        C12641a.m52415a(this.f33827a);
+        __Assert_Not_Null_rn_.__assert_not_null_rn_(this.okHttp_client_rn_n);
         return C12635b.m52400a(this, request, false);
     }
 }

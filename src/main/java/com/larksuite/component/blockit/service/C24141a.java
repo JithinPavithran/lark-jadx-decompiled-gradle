@@ -18,7 +18,7 @@ import com.larksuite.component.blockit.entity.OpenMessageResp;
 import com.larksuite.component.blockit.p1067b.C24050a;
 import com.larksuite.framework.callback.IGetDataCallback;
 import com.larksuite.framework.http.request.AbstractC26011b;
-import com.larksuite.framework.http.request.C26010a;
+import com.larksuite.framework.http.request.Http_Request_rn_;
 import com.larksuite.framework.http.request.FormBody;
 import com.larksuite.framework.http.request.HttpMethod;
 import com.larksuite.framework.http.request.RequestBody;
@@ -109,12 +109,12 @@ public class C24141a {
     }
 
     /* renamed from: a */
-    private C26010a<BaseResponse> m88174a(String str) {
+    private Http_Request_rn_<BaseResponse> m88174a(String str) {
         MGetBlockRequest mGetBlockRequest = new MGetBlockRequest();
         mGetBlockRequest.blockIDs = Collections.singletonList(str);
         mGetBlockRequest.locale = C24050a.m87867b();
         String jSONString = JSONObject.toJSONString(mGetBlockRequest);
-        return new C26010a(HttpMethod.POST, "https://" + m88175b() + "/open-apis/block/server/api/MGetBlockEntityV2").mo92471a(RequestBody.create("application/json", jSONString)).mo92468a(C24050a.m87869d());
+        return new Http_Request_rn_(HttpMethod.POST, "https://" + m88175b() + "/open-apis/block/server/api/MGetBlockEntityV2").set_request_body_rn_(RequestBody.create("application/json", jSONString)).set_http_headers_rn_(C24050a.m87869d());
     }
 
     /* renamed from: b */
@@ -205,7 +205,7 @@ public class C24141a {
         mGetBlockRequest.blockIDs = Collections.singletonList(str);
         mGetBlockRequest.locale = C24050a.m87867b();
         String jSONString = JSONObject.toJSONString(mGetBlockRequest);
-        new C26010a(HttpMethod.POST, "https://" + m88175b() + "/open-apis/block/server/api/MGetOpenMessage").mo92471a(RequestBody.create("application/json", jSONString)).mo92468a(C24050a.m87869d()).mo92475a(new AbstractC26011b<BaseResponse>() {
+        new Http_Request_rn_(HttpMethod.POST, "https://" + m88175b() + "/open-apis/block/server/api/MGetOpenMessage").set_request_body_rn_(RequestBody.create("application/json", jSONString)).set_http_headers_rn_(C24050a.m87869d()).mo92475a(new AbstractC26011b<BaseResponse>() {
             /* class com.larksuite.component.blockit.service.C24141a.C241465 */
 
             @Override // com.larksuite.framework.http.request.AbstractC26011b
@@ -246,7 +246,7 @@ public class C24141a {
                 jsonObject3.add(str2, jsonObject.get(str2));
             }
         }
-        new C26010a(HttpMethod.POST, str).mo92471a(RequestBody.create("application/json", jsonObject3.toString())).mo92468a(C24050a.m87869d()).mo92475a(new AbstractC26011b<BaseResponse>() {
+        new Http_Request_rn_(HttpMethod.POST, str).set_request_body_rn_(RequestBody.create("application/json", jsonObject3.toString())).set_http_headers_rn_(C24050a.m87869d()).mo92475a(new AbstractC26011b<BaseResponse>() {
             /* class com.larksuite.component.blockit.service.C24141a.C241421 */
 
             @Override // com.larksuite.framework.http.request.AbstractC26011b
@@ -292,7 +292,7 @@ public class C24141a {
         aVar.mo92430a("domain", domain.name());
         aVar.mo92430a("uuid", str);
         aVar.mo92430a("blockTypeID", blockTypeID.getValue());
-        new C26010a(HttpMethod.POST, "https://" + m88175b() + "/open-apis/block/server/api/GenerateBlockID").mo92471a(aVar.mo92431a()).mo92475a(new AbstractC26011b<BaseResponse>() {
+        new Http_Request_rn_(HttpMethod.POST, "https://" + m88175b() + "/open-apis/block/server/api/GenerateBlockID").set_request_body_rn_(aVar.mo92431a()).mo92475a(new AbstractC26011b<BaseResponse>() {
             /* class com.larksuite.component.blockit.service.C24141a.C241432 */
 
             @Override // com.larksuite.framework.http.request.AbstractC26011b

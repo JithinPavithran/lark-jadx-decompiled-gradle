@@ -19,7 +19,7 @@ import com.larksuite.component.universe_design.dialog.UDDialog;
 import com.larksuite.suite.R;
 import com.ss.android.floatbubble.C28460b;
 import com.ss.android.lark.desktopmode.utils.DesktopUtil;
-import com.ss.android.lark.monitor.p2372a.C48211b;
+import com.ss.android.lark.monitor.p2372a.__monitor_C48211b_rn_;
 import com.ss.android.lark.p1786d.AbstractC36434e;
 import com.ss.android.lark.p1786d.AbstractC36435f;
 import com.ss.android.lark.p1786d.C36443k;
@@ -476,12 +476,12 @@ public class MeetingActivity extends LifecycleActivity implements AbstractC7710h
         C60700b.m235851b(str, "[onStart]", "isSurvived = " + this.f153982e);
         C60675a.m235774e().mo208236b();
         C63784a.m250428a("[VideoChat_MeetingActivity2_onStart]");
-        C48211b.m190251a().mo168689b("onStart");
+        __monitor_C48211b_rn_.monitor_m190251a_rn_().mo168689b("onStart");
         if (this.f153982e) {
             mo212788o();
             C60790a.m236265a().mo208390a(this);
         }
-        C48211b.m190251a().mo168691c("onStart");
+        __monitor_C48211b_rn_.monitor_m190251a_rn_().monitor_mo168691c_rn_("onStart");
         C63784a.m250429b("[VideoChat_MeetingActivity2_onStart]");
         TimeConsumeUtils.m248928a(a);
     }
@@ -513,7 +513,7 @@ public class MeetingActivity extends LifecycleActivity implements AbstractC7710h
         String str = this.f153981c;
         C60700b.m235851b(str, "[onResume]", "isSurvived = " + this.f153982e);
         C63784a.m250428a("[VideoChat_MeetingActivity2_onResume]");
-        C48211b.m190251a().mo168689b("onResume");
+        __monitor_C48211b_rn_.monitor_m190251a_rn_().mo168689b("onResume");
         ProximityUtil.m248869a(this, mo212786m());
         if (this.f153991n == null) {
             this.f153991n = new MeetingAudioManager.AbstractC61403a() {
@@ -547,7 +547,7 @@ public class MeetingActivity extends LifecycleActivity implements AbstractC7710h
         mo212794u();
         mo208257c();
         mo212795v();
-        C48211b.m190251a().mo168691c("onResume");
+        __monitor_C48211b_rn_.monitor_m190251a_rn_().monitor_mo168691c_rn_("onResume");
         C63784a.m250429b("[VideoChat_MeetingActivity2_onResume]");
         TimeConsumeUtils.m248928a(a);
     }
@@ -662,7 +662,7 @@ public class MeetingActivity extends LifecycleActivity implements AbstractC7710h
             super.finish();
             return;
         }
-        C48211b.m190252a(getClass().getSimpleName()).mo168688b();
+        __monitor_C48211b_rn_.m190252a(getClass().getSimpleName()).mo168688b();
         Intent intent = getIntent();
         if (!DesktopUtil.m144307b()) {
             if (intent.getBooleanExtra("key_is_from_float", false) || intent.getBooleanExtra("is_from_float", false) || intent.getBooleanExtra("key_meeting_is_from_float", false)) {
@@ -675,7 +675,7 @@ public class MeetingActivity extends LifecycleActivity implements AbstractC7710h
             str = "onCreate";
         }
         C68296b<Boolean> a2 = TimeConsumeUtils.m248927a(this.f153981c + ":PageLoadMonitor.pageSpanStart");
-        C48211b.m190251a().mo168689b(str);
+        __monitor_C48211b_rn_.monitor_m190251a_rn_().mo168689b(str);
         TimeConsumeUtils.m248928a(a2);
         C68296b<Boolean> a3 = TimeConsumeUtils.m248927a(this.f153981c + ":followSdk.docActivityExt");
         this.f153986i = VideoChatModuleDependency.getDocsDependency().mo196380c().mo196382a((AppCompatActivity) this);
@@ -696,7 +696,7 @@ public class MeetingActivity extends LifecycleActivity implements AbstractC7710h
             super.finish();
         }
         MeetingCheckUtils.m248887a();
-        C48211b.m190251a().mo168691c(str);
+        __monitor_C48211b_rn_.monitor_m190251a_rn_().monitor_mo168691c_rn_(str);
         C63784a.m250429b("[VideoChat_MeetingActivity2_onCreate]");
         TimeConsumeUtils.m248928a(a);
     }

@@ -15,7 +15,7 @@ import com.ss.android.lark.mine.impl.info.MineInfoActivity;
 import com.ss.android.lark.mine.impl.info.edit_name.mvp.MineUpdateNameModel;
 import com.ss.android.lark.mine.impl.info.edit_name.mvp.MineUpdateNamePresenter;
 import com.ss.android.lark.mine.impl.info.edit_name.mvp.MineUpdateNameView;
-import com.ss.android.lark.monitor.p2372a.C48211b;
+import com.ss.android.lark.monitor.p2372a.__monitor_C48211b_rn_;
 
 /* renamed from: com.ss.android.lark.mine.impl.info.edit_name.a */
 public class C45765a extends BaseFragment {
@@ -65,7 +65,7 @@ public class C45765a extends BaseFragment {
     @Override // androidx.fragment.app.Fragment
     public void onResume() {
         super.onResume();
-        C48211b.m190251a().mo168692d();
+        __monitor_C48211b_rn_.monitor_m190251a_rn_().mo168692d();
     }
 
     /* renamed from: a */
@@ -105,16 +105,16 @@ public class C45765a extends BaseFragment {
             finish();
             return;
         }
-        C48211b.m190251a().mo168689b("initMVP");
+        __monitor_C48211b_rn_.monitor_m190251a_rn_().mo168689b("initMVP");
         m181358b();
-        C48211b.m190251a().mo168691c("initMVP");
+        __monitor_C48211b_rn_.monitor_m190251a_rn_().monitor_mo168691c_rn_("initMVP");
     }
 
     @Override // com.ss.android.lark.desktopmode.p1787a.C36516a, androidx.fragment.app.Fragment
     public View onCreateView(LayoutInflater layoutInflater, ViewGroup viewGroup, Bundle bundle) {
-        C48211b.m190251a().mo168689b("onCreateView");
+        __monitor_C48211b_rn_.monitor_m190251a_rn_().mo168689b("onCreateView");
         this.f115520a = layoutInflater.inflate(R.layout.activity_mine_update_name, viewGroup, false);
-        C48211b.m190251a().mo168691c("onCreateView");
+        __monitor_C48211b_rn_.monitor_m190251a_rn_().monitor_mo168691c_rn_("onCreateView");
         return this.f115520a;
     }
 }

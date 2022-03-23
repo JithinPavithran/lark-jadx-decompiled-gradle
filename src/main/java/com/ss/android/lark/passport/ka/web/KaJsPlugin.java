@@ -12,7 +12,7 @@ import com.larksuite.component.dybrid.h5api.api.H5Event;
 import com.larksuite.component.dybrid.h5core.p1076d.C24214b;
 import com.larksuite.component.dybrid.h5core.p1082h.C24246a;
 import com.larksuite.component.ui.toast.LKUIToast;
-import com.larksuite.framework.http.p1191f.C26005c;
+import com.larksuite.framework.http.p1191f.URL_Domain_Parser_rn_;
 import com.larksuite.framework.thread.CoreThreadPool;
 import com.ss.android.lark.log.Log;
 import com.ss.android.lark.openapi.p2397a.C48758b;
@@ -300,9 +300,9 @@ public class KaJsPlugin implements AbstractC24169l {
             f123761a.mo171471d("KaJsPlugin", "isAllowedUrl return false : allowUrlList is null");
             return false;
         } else {
-            String a = C26005c.m94126a(str);
+            String a = URL_Domain_Parser_rn_.get_top_private_domain_from_URL_rn_(str);
             for (String str2 : list) {
-                String a2 = C26005c.m94126a(str2);
+                String a2 = URL_Domain_Parser_rn_.get_top_private_domain_from_URL_rn_(str2);
                 if (a != null && a.equals(a2)) {
                     f123761a.mo171465b("KaJsPlugin", "isAllowedUrl host match return true");
                     return true;

@@ -15,7 +15,7 @@ import com.ss.android.lark.base.fragment.BaseFragmentActivity;
 import com.ss.android.lark.biz.core.api.ICoreApi;
 import com.ss.android.lark.dfcore.DynamicFeatureCore;
 import com.ss.android.lark.log.Log;
-import com.ss.android.lark.monitor.p2372a.C48211b;
+import com.ss.android.lark.monitor.p2372a.__monitor_C48211b_rn_;
 import com.ss.android.lark.utils.ApiUtils;
 import com.ss.android.lark.utils.C57824f;
 import java.util.ArrayList;
@@ -87,7 +87,7 @@ public class ShowGroupMemberActivity extends BaseFragmentActivity {
 
     public void onWindowFocusChanged(boolean z) {
         super.onWindowFocusChanged(z);
-        C48211b.m190251a().mo168690c();
+        __monitor_C48211b_rn_.monitor_m190251a_rn_().mo168690c();
     }
 
     /* renamed from: a */
@@ -123,7 +123,7 @@ public class ShowGroupMemberActivity extends BaseFragmentActivity {
     /* access modifiers changed from: protected */
     @Override // androidx.activity.ComponentActivity, androidx.core.app.ComponentActivity, androidx.appcompat.app.AppCompatActivity, androidx.fragment.app.FragmentActivity, com.larksuite.component.air.AirActivity, com.ss.android.lark.base.fragment.BaseFragmentActivity
     public void onCreate(Bundle bundle) {
-        C48211b.m190252a("ShowGroupMemberActivity").mo168688b();
+        __monitor_C48211b_rn_.m190252a("ShowGroupMemberActivity").mo168688b();
         super.onCreate(bundle);
         if (!m179341a(getIntent().getExtras())) {
             finish();

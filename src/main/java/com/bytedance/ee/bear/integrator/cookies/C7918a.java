@@ -8,8 +8,8 @@ import com.bytedance.ee.bear.lark.p414b.AbstractC7993f;
 import com.bytedance.ee.bear.lark.p414b.AbstractC8004n;
 import com.bytedance.ee.log.C13479a;
 import com.larksuite.framework.http.p1187b.AbstractC25990b;
-import com.larksuite.framework.http.p1191f.C26005c;
-import com.larksuite.framework.http.response.C26014a;
+import com.larksuite.framework.http.p1191f.URL_Domain_Parser_rn_;
+import com.larksuite.framework.http.response.Cookie_Details_Container_rn_;
 import com.larksuite.framework.thread.CoreThreadPool;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -23,7 +23,7 @@ public class C7918a {
     public static void m31653a(String str) {
         AbstractC7993f fVar = (AbstractC7993f) KoinJavaComponent.m268610a(AbstractC7993f.class);
         String c = fVar.mo30991c(((AbstractC7988a) KoinJavaComponent.m268610a(AbstractC7988a.class)).mo30980c());
-        String b = C26005c.m94127b(c);
+        String b = URL_Domain_Parser_rn_.get_host_from_URL_rn_(c);
         ArrayList arrayList = new ArrayList();
         arrayList.add(b);
         arrayList.add(fVar.mo30988b());
@@ -61,8 +61,8 @@ public class C7918a {
     }
 
     /* renamed from: a */
-    private static C26014a m31652a(String str, String str2, String str3) {
-        C26014a.C26015a aVar = new C26014a.C26015a();
+    private static Cookie_Details_Container_rn_ m31652a(String str, String str2, String str3) {
+        Cookie_Details_Container_rn_.C26015a aVar = new Cookie_Details_Container_rn_.C26015a();
         aVar.mo92517c(str3).mo92518d("/").mo92514b().mo92512a(253402300799999L).mo92513a(str2).mo92515b(str);
         return aVar.mo92519d();
     }

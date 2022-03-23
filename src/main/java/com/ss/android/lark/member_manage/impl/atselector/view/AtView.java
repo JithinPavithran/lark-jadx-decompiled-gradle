@@ -26,7 +26,7 @@ import com.ss.android.lark.member_manage.impl.atselector.bean.BaseAtBean;
 import com.ss.android.lark.member_manage.impl.atselector.view.adapter.AtHeaderSelectedAdapter;
 import com.ss.android.lark.member_manage.impl.atselector.view.adapter.C45021a;
 import com.ss.android.lark.member_manage.impl.statistics.AtSelectPerceptionErrorCostTimeHitPoint;
-import com.ss.android.lark.monitor.p2372a.C48211b;
+import com.ss.android.lark.monitor.p2372a.__monitor_C48211b_rn_;
 import com.ss.android.lark.ui.CommonTitleBar;
 import com.ss.android.lark.ui.CommonTitleBarConstants;
 import com.ss.android.lark.ui.IActionTitlebar;
@@ -393,7 +393,7 @@ public class AtView implements C44972b.AbstractC44975b {
         m178489a(false, list);
         this.f113975g.resetAll(list);
         this.mRecommendRecyclerView.post($$Lambda$AtView$Yhdh32cQGiDyAIy66sN1xul2gHg.INSTANCE);
-        C48211b.m190251a().mo168687a(this.mRecommendRecyclerView);
+        __monitor_C48211b_rn_.monitor_m190251a_rn_().mo168687a(this.mRecommendRecyclerView);
     }
 
     @Override // com.ss.android.lark.member_manage.impl.atselector.C44972b.AbstractC44975b

@@ -25,7 +25,7 @@ import com.ss.android.lark.appreciablelib.Scene;
 import com.ss.android.lark.base.fragment.BaseFragmentActivity;
 import com.ss.android.lark.desktopmode.utils.DesktopUtil;
 import com.ss.android.lark.log.Log;
-import com.ss.android.lark.monitor.p2372a.C48211b;
+import com.ss.android.lark.monitor.p2372a.__monitor_C48211b_rn_;
 import com.ss.android.lark.utils.StatusBarUtil;
 import com.ss.android.lark.utils.UIHelper;
 import com.ss.android.lark.widget.listener.OnSingleClickListener;
@@ -337,7 +337,7 @@ public class PhotoPagerActivity extends BaseFragmentActivity {
 
     public void onWindowFocusChanged(boolean z) {
         super.onWindowFocusChanged(z);
-        C48211b.m190251a().mo168690c();
+        __monitor_C48211b_rn_.monitor_m190251a_rn_().mo168690c();
     }
 
     /* renamed from: c */
@@ -401,15 +401,15 @@ public class PhotoPagerActivity extends BaseFragmentActivity {
     /* access modifiers changed from: protected */
     @Override // androidx.activity.ComponentActivity, androidx.core.app.ComponentActivity, androidx.appcompat.app.AppCompatActivity, androidx.fragment.app.FragmentActivity, com.larksuite.component.air.AirActivity, com.ss.android.lark.base.fragment.BaseFragmentActivity
     public void onCreate(Bundle bundle) {
-        C48211b.m190252a("PhotoPagerActivity").mo168688b();
-        C48211b.m190251a().mo168689b("setContentView");
+        __monitor_C48211b_rn_.m190252a("PhotoPagerActivity").mo168688b();
+        __monitor_C48211b_rn_.monitor_m190251a_rn_().mo168689b("setContentView");
         StatusBarUtil.hideStatusBar(this);
         super.onCreate(bundle);
         setContentView(R.layout.__picker_activity_photo_pager);
-        C48211b.m190251a().mo168691c("setContentView");
+        __monitor_C48211b_rn_.monitor_m190251a_rn_().monitor_mo168691c_rn_("setContentView");
         if (!mo198465a()) {
             finish();
-            C48211b.m190251a().mo168693e();
+            __monitor_C48211b_rn_.monitor_m190251a_rn_().mo168693e();
         }
         m227096b(bundle);
     }

@@ -1,6 +1,6 @@
 package com.bytedance.ee.lark.infra.network.ref.p635a;
 
-import com.bytedance.ee.eenet.httpclient.AbstractC12625f;
+import com.bytedance.ee.eenet.httpclient.Abstract_ByteDance_OkHttp3_Client_rn_;
 import com.bytedance.ee.lark.infra.network.ref.entity.C12878e;
 import com.bytedance.ee.lark.infra.network.ref.entity.C12880g;
 import java.io.IOException;
@@ -18,10 +18,10 @@ import okhttp3.Protocol;
 public abstract class AbstractC12848b extends AbstractC12855g {
 
     /* renamed from: a */
-    private AbstractC12625f f34309a;
+    private Abstract_ByteDance_OkHttp3_Client_rn_ f34309a;
 
     /* renamed from: a */
-    public abstract AbstractC12625f mo48482a(OkHttpClient.Builder builder);
+    public abstract Abstract_ByteDance_OkHttp3_Client_rn_ mo48482a(OkHttpClient.Builder builder);
 
     public AbstractC12848b() {
     }

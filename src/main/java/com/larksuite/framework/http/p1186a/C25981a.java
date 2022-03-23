@@ -1,10 +1,10 @@
 package com.larksuite.framework.http.p1186a;
 
 import android.text.TextUtils;
-import com.larksuite.framework.http.p1186a.C25984b;
+
 import com.larksuite.framework.http.p1188c.C25997a;
 import com.larksuite.framework.http.request.AbstractC26011b;
-import com.larksuite.framework.http.request.C26010a;
+import com.larksuite.framework.http.request.Http_Request_rn_;
 import com.larksuite.framework.http.request.FormBody;
 import com.larksuite.framework.http.request.HttpHeaders;
 import com.larksuite.framework.http.response.ErrorResult;
@@ -14,7 +14,6 @@ import java.nio.charset.Charset;
 import java.util.Map;
 import okhttp3.Call;
 import okhttp3.Callback;
-import okhttp3.FormBody;
 import okhttp3.MediaType;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
@@ -25,7 +24,7 @@ import okhttp3.Response;
 public class C25981a<T> implements AbstractC25988d<T> {
 
     /* renamed from: a */
-    protected C26010a<T> f64326a;
+    protected Http_Request_rn_<T> f64326a;
 
     /* renamed from: b */
     protected OkHttpClient f64327b;
@@ -87,7 +86,7 @@ public class C25981a<T> implements AbstractC25988d<T> {
 
             @Override // okhttp3.Callback
             public void onResponse(Call call, Response response) throws IOException {
-                C25984b.C25986a a = C25984b.m94073a(C25997a.m94105a(bVar.getClass()), C25981a.this.f64326a.mo92480c(), C25981a.this.f64326a, response);
+                C25984b.C25986a a = C25984b.m94073a(C25997a.m94105a(bVar.getClass()), C25981a.this.f64326a.get_url_with_parameters_rn_(), C25981a.this.f64326a, response);
                 if (a.f64334b != null) {
                     C25984b.m94076a(C25981a.this.f64326a, 0, a.f64334b.getErrorMessage());
                     bVar.mo86433a(a.f64334b);
@@ -100,19 +99,19 @@ public class C25981a<T> implements AbstractC25988d<T> {
     }
 
     /* renamed from: a */
-    private Request m94069a(C26010a aVar) {
-        String c = aVar.mo92480c();
+    private Request m94069a(Http_Request_rn_ aVar) {
+        String c = aVar.get_url_with_parameters_rn_();
         if (TextUtils.isEmpty(c)) {
             return null;
         }
         Request.Builder url = new Request.Builder().url(c);
-        HttpHeaders h = aVar.mo92486h();
+        HttpHeaders h = aVar.get_headers_rn_();
         if (!h.isEmpty()) {
             for (String str : h.getNames()) {
                 url.addHeader(str, h.get(str));
             }
         }
-        int i = C259832.f64331a[aVar.mo92483e().ordinal()];
+        int i = C259832.f64331a[aVar.get_http_method_rn_().ordinal()];
         if (i == 1) {
             url.get();
         } else if (i == 2) {
@@ -122,8 +121,8 @@ public class C25981a<T> implements AbstractC25988d<T> {
     }
 
     /* renamed from: b */
-    private RequestBody m94070b(C26010a aVar) {
-        com.larksuite.framework.http.request.RequestBody f = aVar.mo92484f();
+    private RequestBody m94070b(Http_Request_rn_ aVar) {
+        com.larksuite.framework.http.request.RequestBody f = aVar.get_request_body_rn_();
         if (f == null) {
             return null;
         }
@@ -158,7 +157,7 @@ public class C25981a<T> implements AbstractC25988d<T> {
     /* renamed from: a */
     public T mo92407a(Class<T> cls) {
         try {
-            C25984b.C25986a a = C25984b.m94073a(cls, this.f64326a.mo92480c(), this.f64326a, this.f64328c.execute());
+            C25984b.C25986a a = C25984b.m94073a(cls, this.f64326a.get_url_with_parameters_rn_(), this.f64326a, this.f64328c.execute());
             if (a.f64334b != null) {
                 Log.m165383e("CallImpl", "execute error = " + a.f64334b);
                 C25984b.m94076a(this.f64326a, 0, a.f64334b.getErrorMessage());
@@ -173,7 +172,7 @@ public class C25981a<T> implements AbstractC25988d<T> {
         }
     }
 
-    public C25981a(OkHttpClient okHttpClient, C26010a<T> aVar) {
+    public C25981a(OkHttpClient okHttpClient, Http_Request_rn_<T> aVar) {
         this.f64326a = aVar;
         this.f64327b = okHttpClient;
         this.f64328c = this.f64327b.newCall(m94069a(aVar));

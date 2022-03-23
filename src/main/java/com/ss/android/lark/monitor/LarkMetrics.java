@@ -3,8 +3,7 @@ package com.ss.android.lark.monitor;
 import android.app.Application;
 import android.content.Intent;
 import com.ss.android.lark.log.Log;
-import com.ss.android.lark.monitor.C48243p;
-import com.ss.android.lark.monitor.p2372a.C48211b;
+import com.ss.android.lark.monitor.p2372a.__monitor_C48211b_rn_;
 import com.ss.android.lark.monitor.traffic.TrafficMonitor;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
@@ -148,7 +147,7 @@ public class LarkMetrics implements C48243p.AbstractC48245a {
         } else {
             ChildProcessMetricsReceiver.m190221a(this.f121294a);
         }
-        C48211b.m190253a(nVar.f121420e);
+        __monitor_C48211b_rn_.m190253a(nVar.f121420e);
         this.f121301h = true;
     }
 

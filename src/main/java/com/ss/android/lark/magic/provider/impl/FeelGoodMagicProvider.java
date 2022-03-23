@@ -21,7 +21,7 @@ import com.huawei.hms.maps.model.BitmapDescriptorFactory;
 import com.larksuite.framework.http.p1186a.AbstractC25988d;
 import com.larksuite.framework.http.p1187b.AbstractC25990b;
 import com.larksuite.framework.http.request.AbstractC26011b;
-import com.larksuite.framework.http.request.C26010a;
+import com.larksuite.framework.http.request.Http_Request_rn_;
 import com.larksuite.framework.http.request.HttpMethod;
 import com.larksuite.framework.http.request.RequestBody;
 import com.larksuite.framework.http.response.BaseResponse;
@@ -117,7 +117,7 @@ public final class FeelGoodMagicProvider implements IMagicProvider {
         public static final class C41715a extends AbstractC26011b<BaseResponse> {
 
             /* renamed from: a */
-            final /* synthetic */ C26010a f105945a;
+            final /* synthetic */ Http_Request_rn_ f105945a;
 
             /* renamed from: b */
             final /* synthetic */ AbstractC13918c f105946b;
@@ -147,14 +147,14 @@ public final class FeelGoodMagicProvider implements IMagicProvider {
                 this.f105946b.mo51192a(aVar);
             }
 
-            C41715a(C26010a aVar, AbstractC13918c cVar) {
+            C41715a(Http_Request_rn_ aVar, AbstractC13918c cVar) {
                 this.f105945a = aVar;
                 this.f105946b = cVar;
             }
         }
 
         /* renamed from: a */
-        public final void mo150029a(C26010a<BaseResponse> aVar, AbstractC13918c cVar) {
+        public final void mo150029a(Http_Request_rn_<BaseResponse> aVar, AbstractC13918c cVar) {
             Intrinsics.checkParameterIsNotNull(aVar, "request");
             Intrinsics.checkParameterIsNotNull(cVar, "callback");
             AbstractC25988d a = this.f105944a.mo92412a(aVar);
@@ -163,10 +163,10 @@ public final class FeelGoodMagicProvider implements IMagicProvider {
         }
 
         /* renamed from: a */
-        public final C26010a<BaseResponse> mo150028a(HttpMethod httpMethod, String str, Map<String, String> map) {
+        public final Http_Request_rn_<BaseResponse> mo150028a(HttpMethod httpMethod, String str, Map<String, String> map) {
             Intrinsics.checkParameterIsNotNull(httpMethod, "method");
             Intrinsics.checkParameterIsNotNull(str, "url");
-            C26010a<BaseResponse> aVar = new C26010a<>(httpMethod, str);
+            Http_Request_rn_<BaseResponse> aVar = new Http_Request_rn_<>(httpMethod, str);
             if (map != null) {
                 for (Map.Entry<String, String> entry : map.entrySet()) {
                     aVar.mo92473a(entry.getKey(), entry.getValue());
@@ -186,8 +186,8 @@ public final class FeelGoodMagicProvider implements IMagicProvider {
                 z = false;
             }
             if (!z && cVar != null) {
-                C26010a<BaseResponse> a = mo150028a(HttpMethod.POST, str, map);
-                a.mo92471a(RequestBody.create("application/json", str2));
+                Http_Request_rn_<BaseResponse> a = mo150028a(HttpMethod.POST, str, map);
+                a.set_request_body_rn_(RequestBody.create("application/json", str2));
                 mo150029a(a, cVar);
             }
         }

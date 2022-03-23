@@ -3,8 +3,8 @@ package com.larksuite.framework.http.p1187b;
 import android.content.Context;
 import com.larksuite.framework.http.p1186a.AbstractC25988d;
 import com.larksuite.framework.http.p1189d.AbstractC26000b;
-import com.larksuite.framework.http.request.C26010a;
-import com.larksuite.framework.http.response.C26014a;
+import com.larksuite.framework.http.request.Http_Request_rn_;
+import com.larksuite.framework.http.response.Cookie_Details_Container_rn_;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -12,19 +12,19 @@ import java.util.concurrent.TimeUnit;
 /* renamed from: com.larksuite.framework.http.b.b */
 public interface AbstractC25990b {
     /* renamed from: a */
-    <T> AbstractC25988d<T> mo92412a(C26010a<T> aVar);
+    <T> AbstractC25988d<T> mo92412a(Http_Request_rn_<T> aVar);
 
     /* renamed from: a */
     C25991a mo92413a();
 
     /* renamed from: a */
-    List<C26014a> mo92414a(String str);
+    List<Cookie_Details_Container_rn_> mo92414a(String str);
 
     /* renamed from: a */
     void mo92415a(Context context);
 
     /* renamed from: a */
-    void mo92416a(String str, List<C26014a> list);
+    void mo92416a(String str, List<Cookie_Details_Container_rn_> list);
 
     /* renamed from: com.larksuite.framework.http.b.b$a */
     public static final class C25991a {

@@ -14,12 +14,11 @@ import com.larksuite.suite.R;
 import com.ss.android.lark.base.fragment.BaseFragment;
 import com.ss.android.lark.desktopmode.utils.DesktopUtil;
 import com.ss.android.lark.ding.helper.C36644b;
-import com.ss.android.lark.monitor.p2372a.C48211b;
+import com.ss.android.lark.monitor.p2372a.__monitor_C48211b_rn_;
 import com.ss.android.lark.setting.C54115c;
 import com.ss.android.lark.setting.page.C54129a;
 import com.ss.android.lark.setting.page.content.common.C54150a;
 import com.ss.android.lark.setting.page.statistics.SettingHitPoint;
-import com.ss.android.lark.setting.page.v1.mvp.MineSystemSettingView;
 
 /* renamed from: com.ss.android.lark.setting.page.v1.mvp.b */
 public class C54571b extends BaseFragment {
@@ -192,7 +191,7 @@ public class C54571b extends BaseFragment {
     @Override // com.ss.android.lark.desktopmode.p1787a.C36516a, androidx.fragment.app.Fragment
     public void onStart() {
         super.onStart();
-        C48211b.m190251a().mo168690c();
+        __monitor_C48211b_rn_.monitor_m190251a_rn_().mo168690c();
     }
 
     /* renamed from: a */
@@ -205,7 +204,7 @@ public class C54571b extends BaseFragment {
 
     @Override // com.ss.android.lark.desktopmode.p1787a.C36516a, com.ss.android.lark.base.fragment.BaseFragment, androidx.fragment.app.Fragment
     public void onCreate(Bundle bundle) {
-        C48211b.m190252a("MineSystemSetting").mo168688b();
+        __monitor_C48211b_rn_.m190252a("MineSystemSetting").mo168688b();
         super.onCreate(bundle);
     }
 
@@ -229,15 +228,15 @@ public class C54571b extends BaseFragment {
     @Override // androidx.fragment.app.Fragment
     public void onViewCreated(View view, Bundle bundle) {
         super.onViewCreated(view, bundle);
-        C48211b.m190251a().mo168689b("initMVP");
+        __monitor_C48211b_rn_.monitor_m190251a_rn_().mo168689b("initMVP");
         m211715a();
-        C48211b.m190251a().mo168691c("initMVP");
+        __monitor_C48211b_rn_.monitor_m190251a_rn_().monitor_mo168691c_rn_("initMVP");
     }
 
     @Override // com.ss.android.lark.desktopmode.p1787a.C36516a, androidx.fragment.app.Fragment
     public View onCreateView(LayoutInflater layoutInflater, ViewGroup viewGroup, Bundle bundle) {
         int i;
-        C48211b.m190251a().mo168689b("onCreateView");
+        __monitor_C48211b_rn_.monitor_m190251a_rn_().mo168689b("onCreateView");
         View view = this.f134877a;
         if (view == null) {
             if (DesktopUtil.m144301a(viewGroup.getContext())) {
@@ -250,7 +249,7 @@ public class C54571b extends BaseFragment {
             ((ViewGroup) this.f134877a.getParent()).removeView(this.f134877a);
         }
         this.f134879c = getActivity();
-        C48211b.m190251a().mo168691c("onCreateView");
+        __monitor_C48211b_rn_.monitor_m190251a_rn_().monitor_mo168691c_rn_("onCreateView");
         return this.f134877a;
     }
 }

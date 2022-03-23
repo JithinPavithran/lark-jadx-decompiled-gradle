@@ -5,13 +5,12 @@ import com.franmontiel.persistentcookiejar.ClearableCookieJar;
 import com.franmontiel.persistentcookiejar.cache.SetCookieCache;
 import com.larksuite.framework.http.p1186a.AbstractC25988d;
 import com.larksuite.framework.http.p1186a.C25981a;
-import com.larksuite.framework.http.p1187b.AbstractC25990b;
 import com.larksuite.framework.http.p1189d.AbstractC25999a;
 import com.larksuite.framework.http.p1189d.AbstractC26000b;
-import com.larksuite.framework.http.p1190e.C26001a;
-import com.larksuite.framework.http.p1190e.C26002b;
-import com.larksuite.framework.http.request.C26010a;
-import com.larksuite.framework.http.response.C26014a;
+import com.larksuite.framework.http.p1190e.Lark_Clearable_Cookie_Jar_rn_;
+import com.larksuite.framework.http.p1190e.Lark_Cookie_Persistor_rn_;
+import com.larksuite.framework.http.request.Http_Request_rn_;
+import com.larksuite.framework.http.response.Cookie_Details_Container_rn_;
 import com.larksuite.framework.utils.C26252ad;
 import com.ss.android.lark.log.Log;
 import java.io.IOException;
@@ -28,14 +27,14 @@ import okhttp3.Response;
 public class C25992c implements AbstractC25990b {
 
     /* renamed from: a */
-    OkHttpClient f64353a;
+    OkHttpClient okhttp_client_rn_;
 
     /* renamed from: b */
     private AbstractC25990b.C25991a f64354b;
 
     /* renamed from: b */
-    public OkHttpClient mo92424b() {
-        return this.f64353a;
+    public OkHttpClient get_okhttp_client_rn_() {
+        return this.okhttp_client_rn_;
     }
 
     @Override // com.larksuite.framework.http.p1187b.AbstractC25990b
@@ -46,8 +45,8 @@ public class C25992c implements AbstractC25990b {
 
     @Override // com.larksuite.framework.http.p1187b.AbstractC25990b
     /* renamed from: a */
-    public <T> AbstractC25988d<T> mo92412a(C26010a<T> aVar) {
-        return new C25981a(this.f64353a, aVar);
+    public <T> AbstractC25988d<T> mo92412a(Http_Request_rn_<T> aVar) {
+        return new C25981a(this.okhttp_client_rn_, aVar);
     }
 
     /* renamed from: a */
@@ -74,7 +73,7 @@ public class C25992c implements AbstractC25990b {
         OkHttpClient.Builder builder = new OkHttpClient.Builder();
         if (aVar.f64346c) {
             Context context = aVar.f64344a;
-            builder.cookieJar(new C26001a(context, new SetCookieCache(), new C26002b(context)));
+            builder.cookieJar(new Lark_Clearable_Cookie_Jar_rn_(context, new SetCookieCache(), new Lark_Cookie_Persistor_rn_(context)));
         }
         List<Interceptor> a = m94096a(aVar.f64345b);
         if (a != null && a.size() > 0) {
@@ -83,16 +82,16 @@ public class C25992c implements AbstractC25990b {
             }
         }
         builder.connectTimeout(aVar.f64347d, aVar.f64348e).readTimeout(aVar.f64349f, aVar.f64350g).writeTimeout(aVar.f64351h, aVar.f64352i);
-        this.f64353a = builder.build();
+        this.okhttp_client_rn_ = builder.build();
     }
 
     @Override // com.larksuite.framework.http.p1187b.AbstractC25990b
     /* renamed from: a */
-    public List<C26014a> mo92414a(String str) {
-        List<Cookie> loadForRequest = this.f64353a.cookieJar().loadForRequest(HttpUrl.parse(str));
+    public List<Cookie_Details_Container_rn_> mo92414a(String str) {
+        List<Cookie> loadForRequest = this.okhttp_client_rn_.cookieJar().loadForRequest(HttpUrl.parse(str));
         ArrayList arrayList = new ArrayList();
         for (Cookie cookie : loadForRequest) {
-            C26014a.C26015a aVar = new C26014a.C26015a();
+            Cookie_Details_Container_rn_.C26015a aVar = new Cookie_Details_Container_rn_.C26015a();
             aVar.mo92513a(cookie.name()).mo92515b(cookie.value()).mo92512a(cookie.expiresAt()).mo92517c(cookie.domain()).mo92518d(cookie.path());
             if (cookie.secure()) {
                 aVar.mo92511a();
@@ -114,10 +113,10 @@ public class C25992c implements AbstractC25990b {
     @Override // com.larksuite.framework.http.p1187b.AbstractC25990b
     /* renamed from: a */
     public void mo92415a(Context context) {
-        if (this.f64353a == null) {
+        if (this.okhttp_client_rn_ == null) {
             throw new RuntimeException("please init HttpClient first!");
         } else if (C26252ad.m94993b(context)) {
-            CookieJar cookieJar = this.f64353a.cookieJar();
+            CookieJar cookieJar = this.okhttp_client_rn_.cookieJar();
             if (cookieJar instanceof ClearableCookieJar) {
                 ((ClearableCookieJar) cookieJar).mo72355a();
                 Log.m165389i("OkHttpClientImpl", "ClearableCookieJar clearSession finished");
@@ -128,28 +127,28 @@ public class C25992c implements AbstractC25990b {
 
     @Override // com.larksuite.framework.http.p1187b.AbstractC25990b
     /* renamed from: a */
-    public void mo92416a(String str, List<C26014a> list) {
-        HttpUrl parse = HttpUrl.parse(str);
-        CookieJar cookieJar = this.f64353a.cookieJar();
-        ArrayList arrayList = new ArrayList();
-        for (C26014a aVar : list) {
+    public void mo92416a(String url_rn_, List<Cookie_Details_Container_rn_> cookie_details_list_rn_) {
+        HttpUrl http_url_rn = HttpUrl.parse(url_rn_);
+        CookieJar cookieJar = this.okhttp_client_rn_.cookieJar();
+        ArrayList cookie_list_rn_ = new ArrayList();
+        for (Cookie_Details_Container_rn_ cdc_rn_ : cookie_details_list_rn_) {
             Cookie.Builder builder = new Cookie.Builder();
-            builder.name(aVar.mo92502a()).value(aVar.mo92503b()).expiresAt(aVar.mo92504c()).domain(aVar.mo92505d()).path(aVar.mo92506e());
-            if (aVar.mo92507f()) {
+            builder.name(cdc_rn_.mo92502a()).value(cdc_rn_.mo92503b()).expiresAt(cdc_rn_.mo92504c()).domain(cdc_rn_.mo92505d()).path(cdc_rn_.mo92506e());
+            if (cdc_rn_.is_secure_rn_()) {
                 builder.secure();
             }
-            if (aVar.mo92508g()) {
+            if (cdc_rn_.mo92508g()) {
                 builder.httpOnly();
             }
-            if (aVar.mo92510i()) {
+            if (cdc_rn_.mo92510i()) {
                 builder.httpOnly();
             }
             Cookie build = builder.build();
-            if (aVar.mo92509h()) {
+            if (cdc_rn_.is_persistent_rn_()) {
                 build.persistent();
             }
-            arrayList.add(build);
+            cookie_list_rn_.add(build);
         }
-        cookieJar.saveFromResponse(parse, arrayList);
+        cookieJar.saveFromResponse(http_url_rn, cookie_list_rn_);
     }
 }

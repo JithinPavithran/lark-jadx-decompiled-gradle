@@ -17,8 +17,6 @@ import com.ss.android.lark.log.Log;
 import com.ss.android.lark.member_manage.GroupMemberManageModule;
 import com.ss.android.lark.member_manage.dependency.IGroupMemberManageModuleDependency;
 import com.ss.android.lark.member_manage.dto.C44895d;
-import com.ss.android.lark.member_manage.impl.atselector.C44962a;
-import com.ss.android.lark.member_manage.impl.atselector.C44972b;
 import com.ss.android.lark.member_manage.impl.atselector.bean.AtSelectInitData;
 import com.ss.android.lark.member_manage.impl.atselector.bean.BaseAtBean;
 import com.ss.android.lark.member_manage.impl.atselector.bean.C44978b;
@@ -27,7 +25,7 @@ import com.ss.android.lark.member_manage.impl.atselector.bean.SearchBean;
 import com.ss.android.lark.member_manage.impl.atselector.bean.WantAtMemBean;
 import com.ss.android.lark.member_manage.impl.atselector.model.C44999a;
 import com.ss.android.lark.member_manage.impl.statistics.MessageHitPoint;
-import com.ss.android.lark.monitor.p2372a.C48211b;
+import com.ss.android.lark.monitor.p2372a.__monitor_C48211b_rn_;
 import com.ss.android.lark.sdk.C53234a;
 import com.ss.android.lark.search.widget.dependency.SearchWidgetModuleDependency;
 import com.ss.android.lark.searchcommon.reporter.SearchConsistencyReporter;
@@ -387,19 +385,19 @@ public class C44962a extends BasePresenter<C44972b.AbstractC44973a, C44972b.Abst
     @Override // com.larksuite.framework.mvp.BasePresenter, com.larksuite.framework.mvp.ILifecycle
     public void create() {
         super.create();
-        C48211b.m190251a().mo168689b("loadRecommendData");
+        __monitor_C48211b_rn_.monitor_m190251a_rn_().mo168689b("loadRecommendData");
         ((C44972b.AbstractC44973a) getModel()).mo159121a(new IGetDataCallback<List<BaseAtBean>>() {
             /* class com.ss.android.lark.member_manage.impl.atselector.C44962a.C449631 */
 
             @Override // com.larksuite.framework.callback.IGetDataCallback
             public void onError(ErrorResult errorResult) {
-                C48211b.m190251a().mo168691c("loadRecommendData");
+                __monitor_C48211b_rn_.monitor_m190251a_rn_().monitor_mo168691c_rn_("loadRecommendData");
                 GroupMemberManageModule.m177902a().getChatDependency().mo143768b(false);
             }
 
             /* renamed from: a */
             public void onSuccess(List<BaseAtBean> list) {
-                C48211b.m190251a().mo168691c("loadRecommendData");
+                __monitor_C48211b_rn_.monitor_m190251a_rn_().monitor_mo168691c_rn_("loadRecommendData");
                 ((C44972b.AbstractC44975b) C44962a.this.getView()).mo159139a(list);
                 GroupMemberManageModule.m177902a().getChatDependency().mo143768b(false);
             }

@@ -3,15 +3,15 @@ package com.bytedance.ee.eenet.httpclient;
 import okhttp3.OkHttpClient;
 
 /* renamed from: com.bytedance.ee.eenet.httpclient.c */
-public final class C12618c extends AbstractC12625f {
-    C12618c(AbstractC12625f fVar) {
-        this.f33827a = fVar;
+public final class C12618c extends Abstract_ByteDance_OkHttp3_Client_rn_ {
+    C12618c(Abstract_ByteDance_OkHttp3_Client_rn_ fVar) {
+        this.okHttp_client_rn_n = fVar;
     }
 
     /* renamed from: a */
     public void mo47923a(OkHttpClient okHttpClient) {
         if (okHttpClient instanceof AbstractC12627g) {
-            this.f33827a = okHttpClient;
+            this.okHttp_client_rn_n = okHttpClient;
             return;
         }
         throw new AssertionError("httpclient no instance of IOkHttpAttach");
@@ -19,8 +19,8 @@ public final class C12618c extends AbstractC12625f {
 
     @Override // com.bytedance.ee.eenet.httpclient.AbstractC12627g
     /* renamed from: b */
-    public AbstractC12625f mo47924b(OkHttpClient okHttpClient) {
-        return new C12618c(((AbstractC12627g) this.f33827a).mo47924b(okHttpClient));
+    public Abstract_ByteDance_OkHttp3_Client_rn_ mo47924b(OkHttpClient okHttpClient) {
+        return new C12618c(((AbstractC12627g) this.okHttp_client_rn_n).mo47924b(okHttpClient));
     }
 
     /* JADX WARNING: Removed duplicated region for block: B:12:0x0031  */

@@ -31,7 +31,6 @@ import com.bytedance.ee.larkwebview.service.AbstractC13471f;
 import com.bytedance.ee.larkwebview.service.AbstractC13473h;
 import com.bytedance.ee.larkwebview.service.C13477l;
 import com.bytedance.ee.larkwebview.service.listener.OnViewScrollListener;
-import com.bytedance.lark.webview.container.impl.C19857c;
 import com.bytedance.lark.webview.container.impl.menu.C19885d;
 import com.bytedance.lark.webview.container.impl.p835a.C19849a;
 import com.bytedance.lark.webview.container.impl.p835a.C19850b;
@@ -95,7 +94,7 @@ import com.larksuite.suite.R;
 import com.ss.android.lark.base.fragment.AbstractC29528b;
 import com.ss.android.lark.desktopmode.utils.DesktopUtil;
 import com.ss.android.lark.log.Log;
-import com.ss.android.lark.monitor.p2372a.C48211b;
+import com.ss.android.lark.monitor.p2372a.__monitor_C48211b_rn_;
 import com.ss.android.lark.openapi.jsapi.AbstractC48761c;
 import com.ss.android.lark.openapi.jsapi.AbstractC48762d;
 import com.ss.android.lark.openapi.permission.C48765a;
@@ -1115,29 +1114,29 @@ public class C19857c extends AbstractC29528b implements AbstractC25833d, Abstrac
 
     /* renamed from: A */
     private void m72425A() {
-        C48211b.m190251a().mo168689b("initWithContainerV2");
+        __monitor_C48211b_rn_.monitor_m190251a_rn_().mo168689b("initWithContainerV2");
         Future a = ((AbstractC25867d) C25864c.m93607a()).mo92010a(getArguments(), new UIGetDataCallback(new IGetDataCallback<C25863b>() {
             /* class com.bytedance.lark.webview.container.impl.C19857c.C198624 */
 
             @Override // com.larksuite.framework.callback.IGetDataCallback
             public void onError(ErrorResult errorResult) {
-                C48211b.m190251a().mo168691c("initWithContainerV2");
+                __monitor_C48211b_rn_.monitor_m190251a_rn_().monitor_mo168691c_rn_("initWithContainerV2");
                 Log.m165383e("WebContainerFragment", "binding data error will finish");
                 WebContainerReporter.m93651a().mo92045a("init_failed");
                 C19857c.this.finish();
                 ((AbstractC25867d) C25864c.m93607a()).mo92014b(C19857c.this.getArguments());
-                C48211b.m190251a().mo168692d();
+                __monitor_C48211b_rn_.monitor_m190251a_rn_().mo168692d();
             }
 
             /* renamed from: a */
             public void onSuccess(C25863b bVar) {
-                C48211b.m190251a().mo168691c("initWithContainerV2");
+                __monitor_C48211b_rn_.monitor_m190251a_rn_().monitor_mo168691c_rn_("initWithContainerV2");
                 if ((C19857c.this.f48478J == null || C19857c.this.f48478J.isCancelled()) && C19857c.this.getActivity() != null && !C19857c.this.getActivity().isFinishing()) {
                     Log.m165389i("WebContainerFragment", "binding data success, but be canceled will finish");
                     WebContainerReporter.m93651a().mo92045a("init_canceled");
                     C19857c.this.finish();
                     ((AbstractC25867d) C25864c.m93607a()).mo92014b(C19857c.this.getArguments());
-                    C48211b.m190251a().mo168692d();
+                    __monitor_C48211b_rn_.monitor_m190251a_rn_().mo168692d();
                     return;
                 }
                 Log.m165389i("WebContainerFragment", "binding data success");
@@ -1146,10 +1145,10 @@ public class C19857c extends AbstractC29528b implements AbstractC25833d, Abstrac
         }));
         this.f48478J = a;
         if (a == null) {
-            C48211b.m190251a().mo168691c("initWithContainerV2");
+            __monitor_C48211b_rn_.monitor_m190251a_rn_().monitor_mo168691c_rn_("initWithContainerV2");
             Log.m165383e("WebContainerFragment", "cannot get session to bind");
             finish();
-            C48211b.m190251a().mo168692d();
+            __monitor_C48211b_rn_.monitor_m190251a_rn_().mo168692d();
         }
     }
 
@@ -1483,7 +1482,7 @@ public class C19857c extends AbstractC29528b implements AbstractC25833d, Abstrac
             }
             this.f48485R = true;
         }
-        C48211b.m190251a().mo168689b("loadData");
+        __monitor_C48211b_rn_.monitor_m190251a_rn_().mo168689b("loadData");
         final HashMap hashMap = new HashMap();
         hashMap.put("Accept-Language", C25821b.m93347a().mo91852d());
         this.f48470B.mo92042a(this.f48501i);
@@ -1561,8 +1560,8 @@ public class C19857c extends AbstractC29528b implements AbstractC25833d, Abstrac
                 C19857c.this.mo67298j();
             }
         }));
-        C48211b.m190251a().mo168691c("loadData");
-        C48211b.m190251a().mo168692d();
+        __monitor_C48211b_rn_.monitor_m190251a_rn_().monitor_mo168691c_rn_("loadData");
+        __monitor_C48211b_rn_.monitor_m190251a_rn_().mo168692d();
     }
 
     /* JADX WARNING: Code restructure failed: missing block: B:6:0x0042, code lost:
@@ -2001,7 +2000,7 @@ public class C19857c extends AbstractC29528b implements AbstractC25833d, Abstrac
     @Override // com.ss.android.lark.desktopmode.p1787a.C36516a, androidx.fragment.app.Fragment
     public void onActivityCreated(Bundle bundle) {
         super.onActivityCreated(bundle);
-        C48211b.m190251a().mo168689b("onActivityCreated");
+        __monitor_C48211b_rn_.monitor_m190251a_rn_().mo168689b("onActivityCreated");
         if (!mo67296h()) {
             if (getContext() != null) {
                 LKUIToast.show(getContext(), (int) R.string.Lark_Legacy_EnableChrome);
@@ -2033,7 +2032,7 @@ public class C19857c extends AbstractC29528b implements AbstractC25833d, Abstrac
         Log.m165389i("WebContainerFragment", "after parse args");
         Log.m165389i("WebContainerFragment", "init with v2 container");
         m72425A();
-        C48211b.m190251a().mo168691c("onActivityCreated");
+        __monitor_C48211b_rn_.monitor_m190251a_rn_().monitor_mo168691c_rn_("onActivityCreated");
     }
 
     /* access modifiers changed from: protected */
@@ -2111,9 +2110,9 @@ public class C19857c extends AbstractC29528b implements AbstractC25833d, Abstrac
     @Override // com.ss.android.lark.base.fragment.AbstractC29528b
     /* renamed from: a */
     public View mo67276a(LayoutInflater layoutInflater, ViewGroup viewGroup) {
-        C48211b.m190251a().mo168689b("getContentView");
+        __monitor_C48211b_rn_.monitor_m190251a_rn_().mo168689b("getContentView");
         this.f48493a = (ViewGroup) layoutInflater.inflate(R.layout.fragment_webview_container_v2, viewGroup, false);
-        C48211b.m190251a().mo168691c("getContentView");
+        __monitor_C48211b_rn_.monitor_m190251a_rn_().monitor_mo168691c_rn_("getContentView");
         Log.m165389i("WebContainerFragment", "finish inflate view");
         return this.f48493a;
     }

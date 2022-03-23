@@ -14,9 +14,8 @@ import com.ss.android.lark.member_manage.GroupMemberManageModule;
 import com.ss.android.lark.member_manage.impl.base.mvp.BaseGroupMemberManageView;
 import com.ss.android.lark.member_manage.impl.bean.SelectBeansResult;
 import com.ss.android.lark.member_manage.impl.bean.SelectMemberInitData;
-import com.ss.android.lark.member_manage.impl.show_member.common_group.C45190b;
 import com.ss.android.lark.member_manage.impl.statistics.PerfGroupMemberMonitor;
-import com.ss.android.lark.monitor.p2372a.C48211b;
+import com.ss.android.lark.monitor.p2372a.__monitor_C48211b_rn_;
 import com.ss.android.lark.team.entity.Team;
 import java.util.ArrayList;
 import java.util.List;
@@ -84,16 +83,16 @@ public class C45225j extends BasePresenter<C45190b.AbstractC45191a, C45190b.Abst
                     public void run() {
                         ((C45190b.AbstractC45193b) C45225j.this.getView()).mo159765c(dVar);
                         ((C45190b.AbstractC45193b) C45225j.this.getView()).mo159448b(new ArrayList(C45225j.this.f114460c.mo159441c().values()));
-                        C48211b.m190251a().mo168691c("load_data");
-                        C48211b.m190251a().mo168692d();
+                        __monitor_C48211b_rn_.monitor_m190251a_rn_().monitor_mo168691c_rn_("load_data");
+                        __monitor_C48211b_rn_.monitor_m190251a_rn_().mo168692d();
                     }
                 });
             }
 
             @Override // com.larksuite.framework.callback.IGetDataCallback
             public void onError(final ErrorResult errorResult) {
-                C48211b.m190251a().mo168691c("load_data");
-                C48211b.m190251a().mo168692d();
+                __monitor_C48211b_rn_.monitor_m190251a_rn_().monitor_mo168691c_rn_("load_data");
+                __monitor_C48211b_rn_.monitor_m190251a_rn_().mo168692d();
                 PerfGroupMemberMonitor.m179720a(PerfGroupMemberMonitor.ActionType.SHOW, C45225j.this.f114460c.mo159756l(), errorResult);
                 if (zArr[0]) {
                     Log.m165382e(errorResult.toString());
@@ -114,7 +113,7 @@ public class C45225j extends BasePresenter<C45190b.AbstractC45191a, C45190b.Abst
     @Override // com.larksuite.framework.mvp.BasePresenter, com.larksuite.framework.mvp.ILifecycle
     public void create() {
         super.create();
-        C48211b.m190251a().mo168689b("load_data");
+        __monitor_C48211b_rn_.monitor_m190251a_rn_().mo168689b("load_data");
         ((C45190b.AbstractC45191a) getModel()).mo159434a(this.f114463f, new IGetDataCallback<SelectMemberInitData>() {
             /* class com.ss.android.lark.member_manage.impl.show_member.common_group.C45225j.C452261 */
 

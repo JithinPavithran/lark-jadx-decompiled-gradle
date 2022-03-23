@@ -4,7 +4,7 @@ import java.util.Objects;
 import okhttp3.internal.Util;
 
 /* renamed from: com.larksuite.framework.http.response.a */
-public class C26014a {
+public class Cookie_Details_Container_rn_ {
 
     /* renamed from: a */
     private final String f64380a;
@@ -59,7 +59,7 @@ public class C26014a {
     }
 
     /* renamed from: f */
-    public boolean mo92507f() {
+    public boolean is_secure_rn_() {
         return this.f64385f;
     }
 
@@ -69,7 +69,7 @@ public class C26014a {
     }
 
     /* renamed from: h */
-    public boolean mo92509h() {
+    public boolean is_persistent_rn_() {
         return this.f64387h;
     }
 
@@ -127,8 +127,8 @@ public class C26014a {
         }
 
         /* renamed from: d */
-        public C26014a mo92519d() {
-            return new C26014a(this);
+        public Cookie_Details_Container_rn_ mo92519d() {
+            return new Cookie_Details_Container_rn_(this);
         }
 
         /* renamed from: c */
@@ -191,7 +191,7 @@ public class C26014a {
         }
     }
 
-    C26014a(C26015a aVar) {
+    Cookie_Details_Container_rn_(C26015a aVar) {
         Objects.requireNonNull(aVar.f64389a, "builder.name == null");
         Objects.requireNonNull(aVar.f64390b, "builder.value == null");
         Objects.requireNonNull(aVar.f64392d, "builder.domain == null");

@@ -16,7 +16,7 @@ import com.ss.android.lark.base.fragment.BaseFragmentActivity;
 import com.ss.android.lark.biz.core.api.ICoreApi;
 import com.ss.android.lark.dfcore.DynamicFeatureCore;
 import com.ss.android.lark.log.Log;
-import com.ss.android.lark.monitor.p2372a.C48211b;
+import com.ss.android.lark.monitor.p2372a.__monitor_C48211b_rn_;
 import com.ss.android.lark.search.impl.func.global.search.entity.GlobalSearchOrderData;
 import com.ss.android.lark.search.redesign.SearchFragment;
 import com.ss.android.lark.searchcommon.SearchCommonModuleDependency;
@@ -123,7 +123,7 @@ public class SearchActivity extends BaseFragmentActivity {
 
     public void onWindowFocusChanged(boolean z) {
         super.onWindowFocusChanged(z);
-        C48211b.m190251a().mo168690c();
+        __monitor_C48211b_rn_.monitor_m190251a_rn_().mo168690c();
     }
 
     /* renamed from: a */
@@ -159,15 +159,15 @@ public class SearchActivity extends BaseFragmentActivity {
     /* access modifiers changed from: protected */
     @Override // androidx.activity.ComponentActivity, androidx.core.app.ComponentActivity, androidx.appcompat.app.AppCompatActivity, androidx.fragment.app.FragmentActivity, com.larksuite.component.air.AirActivity, com.ss.android.lark.base.fragment.BaseFragmentActivity
     public void onCreate(Bundle bundle) {
-        C48211b.m190252a("LarkSearch.Search.SearchActivity").mo168688b();
+        __monitor_C48211b_rn_.m190252a("LarkSearch.Search.SearchActivity").mo168688b();
         if (bundle != null) {
             bundle.remove("android:support:fragments");
         }
         super.onCreate(bundle);
         SearchCommonModuleDependency.f133119a.mo183785a();
-        C48211b.m190251a().mo168689b("setupFragment");
+        __monitor_C48211b_rn_.monitor_m190251a_rn_().mo168689b("setupFragment");
         m207589d();
-        C48211b.m190251a().mo168691c("setupFragment");
+        __monitor_C48211b_rn_.monitor_m190251a_rn_().monitor_mo168691c_rn_("setupFragment");
         C53883a.m208794a().mo183800c();
     }
 

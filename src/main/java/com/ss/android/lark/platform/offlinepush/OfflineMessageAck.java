@@ -2,7 +2,7 @@ package com.ss.android.lark.platform.offlinepush;
 
 import android.content.Context;
 import com.alibaba.fastjson.JSON;
-import com.larksuite.framework.http.request.C26010a;
+import com.larksuite.framework.http.request.Http_Request_rn_;
 import com.larksuite.framework.http.request.HttpMethod;
 import com.larksuite.framework.http.request.RequestBody;
 import com.larksuite.framework.http.response.BaseResponse;
@@ -94,7 +94,7 @@ public class OfflineMessageAck {
         try {
             ArrayList arrayList = new ArrayList();
             arrayList.add(new AckHttpParams(offlineNotice));
-            BaseResponse baseResponse = (BaseResponse) C51864e.m201147a().mo92412a(new C26010a(HttpMethod.POST, a).mo92476b(RequestBody.create("application/json; charset=utf-8", JSON.toJSONString(arrayList)))).mo92407a(BaseResponse.class);
+            BaseResponse baseResponse = (BaseResponse) C51864e.m201147a().mo92412a(new Http_Request_rn_(HttpMethod.POST, a).set_POST_request_body_rn_(RequestBody.create("application/json; charset=utf-8", JSON.toJSONString(arrayList)))).mo92407a(BaseResponse.class);
             if (baseResponse == null || !baseResponse.isSuccessful()) {
                 Log.m165389i("OfflinePushListener", "send ack by http failed.");
                 r2.run();

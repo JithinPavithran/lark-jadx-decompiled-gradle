@@ -1,7 +1,7 @@
 package com.bytedance.ee.lark.infra.network.larkbrand.net;
 
 import com.bytedance.ee.eenet.AbstractC12610a;
-import com.bytedance.ee.eenet.httpclient.AbstractC12625f;
+import com.bytedance.ee.eenet.httpclient.Abstract_ByteDance_OkHttp3_Client_rn_;
 import com.bytedance.ee.eenet.httpclient.C12617b;
 import com.bytedance.ee.eenet.httpclient.C12618c;
 import com.bytedance.ee.eenet.httpclient.rust.exception.RustIOException;
@@ -41,7 +41,7 @@ public class C12837a {
     public static boolean f34291a = false;
 
     /* renamed from: b */
-    private static AtomicReference<AbstractC12625f> f34292b = new AtomicReference<>(null);
+    private static AtomicReference<Abstract_ByteDance_OkHttp3_Client_rn_> f34292b = new AtomicReference<>(null);
 
     /* renamed from: c */
     private static final List<Interceptor> f34293c = new ArrayList();
@@ -62,7 +62,7 @@ public class C12837a {
     }
 
     /* renamed from: a */
-    public static AbstractC12625f m53013a() {
+    public static Abstract_ByteDance_OkHttp3_Client_rn_ m53013a() {
         m53026b();
         return f34292b.get();
     }

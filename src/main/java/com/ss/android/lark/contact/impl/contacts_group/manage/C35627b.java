@@ -9,8 +9,7 @@ import com.larksuite.suite.R;
 import com.ss.android.lark.base.fragment.BaseFragment;
 import com.ss.android.lark.biz.core.api.PickType;
 import com.ss.android.lark.contact.impl.contacts_group.AbstractC35602f;
-import com.ss.android.lark.contact.impl.contacts_group.manage.MyManageGroupView;
-import com.ss.android.lark.monitor.p2372a.C48211b;
+import com.ss.android.lark.monitor.p2372a.__monitor_C48211b_rn_;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -95,9 +94,9 @@ public class C35627b extends BaseFragment {
 
     @Override // com.ss.android.lark.desktopmode.p1787a.C36516a, androidx.fragment.app.Fragment
     public View onCreateView(LayoutInflater layoutInflater, ViewGroup viewGroup, Bundle bundle) {
-        C48211b.m190251a().mo168689b("MyManageGroup");
+        __monitor_C48211b_rn_.monitor_m190251a_rn_().mo168689b("MyManageGroup");
         View inflate = layoutInflater.inflate(R.layout.fragment_contacts_my_manage_group, viewGroup, false);
-        C48211b.m190251a().mo168691c("MyManageGroup");
+        __monitor_C48211b_rn_.monitor_m190251a_rn_().monitor_mo168691c_rn_("MyManageGroup");
         return inflate;
     }
 

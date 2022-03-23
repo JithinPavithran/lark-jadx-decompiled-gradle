@@ -42,7 +42,7 @@ import com.ss.android.lark.desktopmode.utils.DesktopUtil;
 import com.ss.android.lark.image.ImageLoader;
 import com.ss.android.lark.image.api.IRequestCreator;
 import com.ss.android.lark.log.Log;
-import com.ss.android.lark.monitor.p2372a.C48211b;
+import com.ss.android.lark.monitor.p2372a.__monitor_C48211b_rn_;
 import com.ss.android.lark.utils.UIHelper;
 import com.ss.android.lark.utils.rxjava.C57865c;
 import com.ss.android.lark.widget.listener.OnSingleClickListener;
@@ -52,7 +52,6 @@ import com.ss.android.lark.widget.photo_picker.C58612c;
 import com.ss.android.lark.widget.photo_picker.C58641f;
 import com.ss.android.lark.widget.photo_picker.entity.Photo;
 import com.ss.android.lark.widget.photo_picker.entity.PhotoItem;
-import com.ss.android.lark.widget.photo_picker.gallery.C58732b;
 import com.ss.android.lark.widget.photo_picker.gallery.callback.IOnCreateView;
 import com.ss.android.lark.widget.photo_picker.gallery.callback.OnChatAlbumClickListener;
 import com.ss.android.lark.widget.photo_picker.gallery.callback.OnDialogMenuClickListener;
@@ -1247,7 +1246,7 @@ public class ImagePagerFragment extends Fragment {
     public void onCreate(Bundle bundle) {
         int i;
         super.onCreate(bundle);
-        C48211b.m190251a().mo168689b("Pager#onCreate");
+        __monitor_C48211b_rn_.monitor_m190251a_rn_().mo168689b("Pager#onCreate");
         ImagePreviewHitPoint.m228127a();
         Bundle arguments = getArguments();
         if (arguments != null) {
@@ -1280,7 +1279,7 @@ public class ImagePagerFragment extends Fragment {
         }
         this.f144938Y = ImageLoader.with(this);
         this.f144943d = new C58732b(getChildFragmentManager(), ImageLoader.with(this), this.f144940a, i);
-        C48211b.m190251a().mo168691c("Pager#onCreate");
+        __monitor_C48211b_rn_.monitor_m190251a_rn_().monitor_mo168691c_rn_("Pager#onCreate");
     }
 
     /* renamed from: a */

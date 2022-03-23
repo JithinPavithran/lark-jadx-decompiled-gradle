@@ -1,7 +1,7 @@
 package com.ss.android.lark.openplatform.common;
 
 import com.larksuite.framework.http.p1187b.AbstractC25990b;
-import com.larksuite.framework.http.request.C26010a;
+import com.larksuite.framework.http.request.Http_Request_rn_;
 import com.larksuite.framework.http.request.RequestBody;
 import com.larksuite.framework.http.response.BaseResponse;
 import java.io.IOException;
@@ -16,7 +16,7 @@ public final class C48829f {
         if (jSONObject == null) {
             jSONObject = new JSONObject();
         }
-        C26010a aVar = new C26010a();
+        Http_Request_rn_ aVar = new Http_Request_rn_();
         RequestBody create = RequestBody.create("application/json", jSONObject.toString());
         if (map != null) {
             for (Map.Entry<String, String> entry : map.entrySet()) {
@@ -24,7 +24,7 @@ public final class C48829f {
                 aVar.mo92473a(entry.getKey(), entry.getValue());
             }
         }
-        BaseResponse baseResponse = (BaseResponse) bVar.mo92412a(aVar.mo92476b(create).mo92472a(str)).mo92407a(BaseResponse.class);
+        BaseResponse baseResponse = (BaseResponse) bVar.mo92412a(aVar.set_POST_request_body_rn_(create).mo92472a(str)).mo92407a(BaseResponse.class);
         if (baseResponse == null || baseResponse.body() == null) {
             return "";
         }

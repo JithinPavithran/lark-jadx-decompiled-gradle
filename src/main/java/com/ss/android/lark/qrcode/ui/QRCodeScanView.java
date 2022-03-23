@@ -14,10 +14,8 @@ import com.larksuite.suite.R;
 import com.ss.android.lark.biz.core.api.AbstractC29569m;
 import com.ss.android.lark.fastqrcode.p1834d.C37059b;
 import com.ss.android.lark.log.Log;
-import com.ss.android.lark.monitor.p2372a.C48211b;
+import com.ss.android.lark.monitor.p2372a.__monitor_C48211b_rn_;
 import com.ss.android.lark.qrcode.QRCodeModule;
-import com.ss.android.lark.qrcode.ui.C52945b;
-import com.ss.android.lark.qrcode.ui.IQRCodeScanner;
 import com.ss.android.lark.ui.CommonTitleBar;
 import com.ss.android.lark.utils.C57805b;
 import com.ss.android.lark.utils.StatusBarUtil;
@@ -119,13 +117,13 @@ public class QRCodeScanView implements C52945b.AbstractC52947b {
             @Override // com.ss.android.lark.utils.C57805b.AbstractC57809a
             public void permissionGranted(boolean z) {
                 if (z) {
-                    C48211b.m190251a().mo168689b("FastQRCodeOnStart");
+                    __monitor_C48211b_rn_.monitor_m190251a_rn_().mo168689b("FastQRCodeOnStart");
                     QRCodeScanView.this.f130804d.mo180900a();
-                    C48211b.m190251a().mo168691c("FastQRCodeOnStart");
-                    C48211b.m190251a().mo168692d();
+                    __monitor_C48211b_rn_.monitor_m190251a_rn_().monitor_mo168691c_rn_("FastQRCodeOnStart");
+                    __monitor_C48211b_rn_.monitor_m190251a_rn_().mo168692d();
                     return;
                 }
-                C48211b.m190251a().mo168693e();
+                __monitor_C48211b_rn_.monitor_m190251a_rn_().mo168693e();
             }
         });
     }
@@ -169,7 +167,7 @@ public class QRCodeScanView implements C52945b.AbstractC52947b {
 
     /* renamed from: l */
     private void m205002l() {
-        C48211b.m190251a().mo168689b("FastQRCodeOnCreate");
+        __monitor_C48211b_rn_.monitor_m190251a_rn_().mo168689b("FastQRCodeOnCreate");
         final long currentTimeMillis = System.currentTimeMillis();
         this.f130804d.mo180901a(this.f130802b, R.id.qrcodeview, this.f130803c.mo180908a(), new IQRCodeScanner.IQRCodeScanListener() {
             /* class com.ss.android.lark.qrcode.ui.QRCodeScanView.C529411 */
@@ -184,7 +182,7 @@ public class QRCodeScanView implements C52945b.AbstractC52947b {
                 }
             }
         });
-        C48211b.m190251a().mo168691c("FastQRCodeOnCreate");
+        __monitor_C48211b_rn_.monitor_m190251a_rn_().monitor_mo168691c_rn_("FastQRCodeOnCreate");
     }
 
     /* renamed from: m */

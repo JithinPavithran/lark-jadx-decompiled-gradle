@@ -13,11 +13,9 @@ import com.larksuite.suite.R;
 import com.ss.android.lark.base.fragment.BaseFragment;
 import com.ss.android.lark.chat.entity.chat.Chat;
 import com.ss.android.lark.contact.entity.SelectedData;
-import com.ss.android.lark.contact.impl.contacts_group.C35593b;
-import com.ss.android.lark.contact.impl.contacts_group.ContactsMyGroupView;
 import com.ss.android.lark.contact.impl.contacts_group.hitpoint.ContactsMyGroupHitPoint;
 import com.ss.android.lark.contact.impl.statistics.ContactHitPoint;
-import com.ss.android.lark.monitor.p2372a.C48211b;
+import com.ss.android.lark.monitor.p2372a.__monitor_C48211b_rn_;
 
 /* renamed from: com.ss.android.lark.contact.impl.contacts_group.b */
 public class C35593b extends BaseFragment {
@@ -153,12 +151,12 @@ public class C35593b extends BaseFragment {
     @Override // com.ss.android.lark.desktopmode.p1787a.C36516a, androidx.fragment.app.Fragment
     public View onCreateView(LayoutInflater layoutInflater, ViewGroup viewGroup, Bundle bundle) {
         this.f92077b = layoutInflater.inflate(R.layout.activity_contacts_my_group, viewGroup, false);
-        C48211b.m190251a().mo168691c("onCreateView");
-        C48211b.m190251a().mo168689b("initMVP");
+        __monitor_C48211b_rn_.monitor_m190251a_rn_().monitor_mo168691c_rn_("onCreateView");
+        __monitor_C48211b_rn_.monitor_m190251a_rn_().mo168689b("initMVP");
         m139369a();
         ContactHitPoint.m140790b();
         ContactHitPoint.m140819t();
-        C48211b.m190251a().mo168691c("initMVP");
+        __monitor_C48211b_rn_.monitor_m190251a_rn_().monitor_mo168691c_rn_("initMVP");
         return this.f92077b;
     }
 

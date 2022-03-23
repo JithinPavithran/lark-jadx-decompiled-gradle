@@ -1,6 +1,6 @@
 package com.bytedance.ee.eenet.httpclient;
 
-import com.bytedance.ee.eenet.util.C12641a;
+import com.bytedance.ee.eenet.util.__Assert_Not_Null_rn_;
 import java.util.concurrent.TimeUnit;
 import okhttp3.CookieJar;
 import okhttp3.Dispatcher;
@@ -17,7 +17,7 @@ public class C12614a {
     private Boolean f33789b;
 
     /* renamed from: a */
-    public AbstractC12625f mo47919a() {
+    public Abstract_ByteDance_OkHttp3_Client_rn_ mo47919a() {
         if (this.f33789b.booleanValue()) {
             return C12617b.m52366c(this.f33788a);
         }
@@ -72,7 +72,7 @@ public class C12614a {
 
     public C12614a(OkHttpClient.Builder builder, Boolean bool) {
         this.f33789b = false;
-        C12641a.m52415a(builder);
+        __Assert_Not_Null_rn_.__assert_not_null_rn_(builder);
         this.f33788a = builder;
         this.f33789b = bool;
     }

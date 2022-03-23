@@ -3,9 +3,9 @@ package com.larksuite.framework.http.p1191f;
 import okhttp3.HttpUrl;
 
 /* renamed from: com.larksuite.framework.http.f.c */
-public class C26005c {
+public class URL_Domain_Parser_rn_ {
     /* renamed from: a */
-    public static String m94126a(String str) {
+    public static String get_top_private_domain_from_URL_rn_(String str) {
         HttpUrl parse = HttpUrl.parse(str);
         if (parse == null) {
             return null;
@@ -14,7 +14,7 @@ public class C26005c {
     }
 
     /* renamed from: b */
-    public static String m94127b(String str) {
+    public static String get_host_from_URL_rn_(String str) {
         return HttpUrl.parse(str).host();
     }
 }

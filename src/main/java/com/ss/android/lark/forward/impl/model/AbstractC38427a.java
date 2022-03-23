@@ -119,9 +119,9 @@ public abstract class AbstractC38427a extends BaseModel implements AbstractC3841
             if (searchBaseInfo instanceof SearchChatterInfo) {
                 arrayList.add(searchBaseInfo.getId());
             } else if (searchBaseInfo instanceof SearchChatInfo) {
-                arrayList2.add(ForwardTargetParser.m151569a(searchBaseInfo));
+                arrayList2.add(ForwardTargetParser.create_forward_target_object(searchBaseInfo));
             } else if (searchBaseInfo instanceof SearchThreadInfo) {
-                arrayList2.add(ForwardTargetParser.m151569a(searchBaseInfo));
+                arrayList2.add(ForwardTargetParser.create_forward_target_object(searchBaseInfo));
             }
         }
         if (arrayList.isEmpty()) {
@@ -155,7 +155,7 @@ public abstract class AbstractC38427a extends BaseModel implements AbstractC3841
             if (searchBaseInfo instanceof SearchChatterInfo) {
                 arrayList.add(searchBaseInfo.getId());
             } else {
-                arrayList2.add(ForwardTargetParser.m151569a(searchBaseInfo));
+                arrayList2.add(ForwardTargetParser.create_forward_target_object(searchBaseInfo));
             }
         }
         if (arrayList.isEmpty()) {

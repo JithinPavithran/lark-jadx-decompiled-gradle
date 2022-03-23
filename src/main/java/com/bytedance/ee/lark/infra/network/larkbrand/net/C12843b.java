@@ -1,7 +1,7 @@
 package com.bytedance.ee.lark.infra.network.larkbrand.net;
 
 import android.text.TextUtils;
-import com.bytedance.ee.eenet.httpclient.AbstractC12625f;
+import com.bytedance.ee.eenet.httpclient.Abstract_ByteDance_OkHttp3_Client_rn_;
 import com.bytedance.ee.eenet.p598a.C12611a;
 import com.bytedance.ee.eenet.p599b.AbstractC12612a;
 import com.bytedance.ee.eenet.p599b.C12613b;
@@ -108,7 +108,7 @@ public class C12843b {
     }
 
     /* renamed from: a */
-    public static AbstractC12625f m53036a(long j, long j2, long j3) {
+    public static Abstract_ByteDance_OkHttp3_Client_rn_ m53036a(long j, long j2, long j3) {
         return m53037a(j, j2, j3, (IAppContext) null);
     }
 
@@ -118,7 +118,7 @@ public class C12843b {
     }
 
     /* renamed from: a */
-    public static AbstractC12625f m53037a(long j, long j2, long j3, IAppContext iAppContext) {
+    public static Abstract_ByteDance_OkHttp3_Client_rn_ m53037a(long j, long j2, long j3, IAppContext iAppContext) {
         return C12837a.m53013a().mo47928a().mo47920b(j, TimeUnit.MILLISECONDS).mo47922c(j2, TimeUnit.MILLISECONDS).mo47915a(j3, TimeUnit.MILLISECONDS).mo47919a();
     }
 

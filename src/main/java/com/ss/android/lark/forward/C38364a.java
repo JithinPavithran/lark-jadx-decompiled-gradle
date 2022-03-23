@@ -79,11 +79,11 @@ public class C38364a {
 
     /* renamed from: a */
     public void mo140422a(Context context, ForwardTemplate forwardTemplate, int i, int[] iArr, int[] iArr2) {
-        mo140417a(context, (C36516a) null, forwardTemplate, i, iArr, iArr2);
+        create_intent_and_start_forward_activity_rn_(context, (C36516a) null, forwardTemplate, i, iArr, iArr2);
     }
 
     /* renamed from: a */
-    public void mo140417a(Context context, C36516a aVar, ForwardTemplate forwardTemplate, int i, int[] iArr, int[] iArr2) {
+    public void create_intent_and_start_forward_activity_rn_(Context context, C36516a aVar, ForwardTemplate forwardTemplate, int i, int[] iArr, int[] iArr2) {
         if (forwardTemplate != null) {
             Intent intent = new Intent(context, ForwardPickActivity.class);
             intent.putExtra("parcelable_forward_template", forwardTemplate);
@@ -94,7 +94,7 @@ public class C38364a {
                 intent.putExtra("key_transition_anim_out", iArr2);
             }
             if (!DesktopUtil.m144301a(context)) {
-                m151055a(context, intent, i, forwardTemplate);
+                start_activity_with_intent_rn_(context, intent, i, forwardTemplate);
             } else if (forwardTemplate.mo140596i().mo140805a() == 0) {
                 C38408a aVar2 = new C38408a();
                 aVar2.setArguments(intent.getExtras());
@@ -146,7 +146,7 @@ public class C38364a {
     public void mo140415a(Context context, C36516a aVar, Chat chat, ArrayList<String> arrayList, int i, String str, String str2, boolean z, String str3) {
         ForwardTemplate a = MergeForwardTemplateFactory.m151706a(context, chat, arrayList, i, false, "", ForwardCallType.forNumber(str), ForwardLocation.forNumber(str2), z, str3);
         AppreciablePerformance.f98815c.mo140990a(1);
-        mo140417a(context, aVar, a, i, (int[]) null, (int[]) null);
+        create_intent_and_start_forward_activity_rn_(context, aVar, a, i, (int[]) null, (int[]) null);
     }
 
     /* renamed from: a */
@@ -158,7 +158,7 @@ public class C38364a {
     public void mo140414a(Context context, C36516a aVar, Chat chat, ArrayList<String> arrayList, int i, String str, String str2, String str3) {
         ForwardTemplate a = C38512f.m151894a(context, chat, arrayList, ForwardCallType.forNumber(str), ForwardLocation.forNumber(str2), str3);
         AppreciablePerformance.f98815c.mo140990a(2);
-        mo140417a(context, aVar, a, i, (int[]) null, (int[]) null);
+        create_intent_and_start_forward_activity_rn_(context, aVar, a, i, (int[]) null, (int[]) null);
     }
 
     /* renamed from: a */
@@ -228,7 +228,7 @@ public class C38364a {
     /* renamed from: a */
     public void mo140400a(Context context, ShareTextForwardData shareTextForwardData, int i) {
         if (shareTextForwardData != null && !shareTextForwardData.isEmpty()) {
-            mo140421a(context, C38524k.m151917a(context, shareTextForwardData), i);
+            mo140421a(context, C38524k.create_ForwardTemplate_object_rn_(context, shareTextForwardData), i);
         }
     }
 
@@ -374,7 +374,7 @@ public class C38364a {
     }
 
     /* renamed from: a */
-    private void m151055a(Context context, Intent intent, int i, ForwardTemplate forwardTemplate) {
+    private void start_activity_with_intent_rn_(Context context, Intent intent, int i, ForwardTemplate forwardTemplate) {
         if (context != null && intent != null) {
             Bundle h = forwardTemplate.mo140595h();
             if (h != null && h.getBoolean("sdkshare")) {

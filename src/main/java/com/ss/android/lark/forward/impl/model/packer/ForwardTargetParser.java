@@ -65,7 +65,7 @@ public final class ForwardTargetParser {
 
     @JvmStatic
     /* renamed from: a */
-    public static final ForwardTarget m151569a(SearchBaseInfo searchBaseInfo) {
+    public static final ForwardTarget create_forward_target_object(SearchBaseInfo searchBaseInfo) {
         boolean z;
         Intrinsics.checkParameterIsNotNull(searchBaseInfo, "searchBaseInfo");
         ForwardTarget forwardTarget = null;

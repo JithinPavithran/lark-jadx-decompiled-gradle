@@ -1,7 +1,7 @@
 package com.bytedance.ee.larkbrand.p651f.p652a;
 
 import android.util.SparseArray;
-import com.bytedance.ee.eenet.httpclient.AbstractC12625f;
+import com.bytedance.ee.eenet.httpclient.Abstract_ByteDance_OkHttp3_Client_rn_;
 import com.bytedance.ee.eenet.httpclient.C12614a;
 import com.bytedance.ee.lark.infra.cookie.AppCookieJarMgr;
 import com.bytedance.ee.lark.infra.cookie.p618c.C12760a;
@@ -174,7 +174,7 @@ public class C13051a {
         } else {
             j = 60000;
         }
-        AbstractC12625f a = C12843b.m53037a(j, j, j, this.f34686c);
+        Abstract_ByteDance_OkHttp3_Client_rn_ a = C12843b.m53037a(j, j, j, this.f34686c);
         if (!this.f34685b.contains(Integer.valueOf(i))) {
             return null;
         }

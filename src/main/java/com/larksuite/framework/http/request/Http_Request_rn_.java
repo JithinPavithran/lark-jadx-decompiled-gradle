@@ -4,18 +4,18 @@ import com.larksuite.framework.http.p1186a.AbstractC25988d;
 import com.larksuite.framework.http.p1187b.AbstractC25990b;
 import com.larksuite.framework.http.p1187b.C25994d;
 import com.larksuite.framework.http.p1188c.AbstractC25998b;
-import com.larksuite.framework.http.p1191f.C26006d;
-import com.larksuite.framework.http.p1191f.C26007e;
+import com.larksuite.framework.http.p1191f.Time_And_Random_rn_;
+import com.larksuite.framework.http.p1191f.URL_Parameter_Add_rn_;
 import com.larksuite.framework.http.response.AbstractC26016b;
 
 /* renamed from: com.larksuite.framework.http.request.a */
-public class C26010a<T> {
+public class Http_Request_rn_<T> {
 
     /* renamed from: a */
-    private HttpParams f64369a = new HttpParams();
+    private HttpParams http_params_rn_ = new HttpParams();
 
     /* renamed from: b */
-    private HttpHeaders f64370b = new HttpHeaders();
+    private HttpHeaders http_headers_rn_ = new HttpHeaders();
 
     /* renamed from: c */
     private String f64371c;
@@ -30,10 +30,10 @@ public class C26010a<T> {
     private AbstractC25998b<T> f64374f;
 
     /* renamed from: g */
-    private HttpMethod f64375g = HttpMethod.GET;
+    private HttpMethod http_method_rn_ = HttpMethod.GET;
 
     /* renamed from: h */
-    private RequestBody f64376h;
+    private RequestBody request_body_rn_;
 
     /* renamed from: i */
     private String f64377i = "BaseRequest";
@@ -50,13 +50,13 @@ public class C26010a<T> {
     }
 
     /* renamed from: e */
-    public HttpMethod mo92483e() {
-        return this.f64375g;
+    public HttpMethod get_http_method_rn_() {
+        return this.http_method_rn_;
     }
 
     /* renamed from: f */
-    public RequestBody mo92484f() {
-        return this.f64376h;
+    public RequestBody get_request_body_rn_() {
+        return this.request_body_rn_;
     }
 
     /* renamed from: g */
@@ -65,8 +65,8 @@ public class C26010a<T> {
     }
 
     /* renamed from: i */
-    public HttpParams mo92487i() {
-        return this.f64369a;
+    public HttpParams get_http_params_rn_() {
+        return this.http_params_rn_;
     }
 
     /* renamed from: j */
@@ -84,19 +84,19 @@ public class C26010a<T> {
     }
 
     /* renamed from: c */
-    public String mo92480c() {
-        return C26007e.m94129a(mo92474a() + mo92478b(), this.f64369a.urlParamsMap);
+    public String get_url_with_parameters_rn_() {
+        return URL_Parameter_Add_rn_.add_parameters_to_URL_rn_(mo92474a() + mo92478b(), this.http_params_rn_.urlParamsMap);
     }
 
     /* renamed from: h */
-    public HttpHeaders mo92486h() {
-        if (!this.f64370b.headersMap.containsKey("X-BaseRequest-ID")) {
-            this.f64370b.put("X-BaseRequest-ID", C26006d.m94128a());
+    public HttpHeaders get_headers_rn_() {
+        if (!this.http_headers_rn_.headersMap.containsKey("X-BaseRequest-ID")) {
+            this.http_headers_rn_.put("X-BaseRequest-ID", Time_And_Random_rn_.get_current_milli_seconds_plus_insecure_random_rn_());
         }
-        return this.f64370b;
+        return this.http_headers_rn_;
     }
 
-    public C26010a() {
+    public Http_Request_rn_() {
     }
 
     /* renamed from: a */
@@ -105,56 +105,56 @@ public class C26010a<T> {
     }
 
     /* renamed from: a */
-    public C26010a<T> mo92468a(HttpHeaders httpHeaders) {
-        this.f64370b = httpHeaders;
+    public Http_Request_rn_<T> set_http_headers_rn_(HttpHeaders httpHeaders) {
+        this.http_headers_rn_ = httpHeaders;
         return this;
     }
 
     /* renamed from: b */
-    public C26010a<T> mo92477b(String str) {
+    public Http_Request_rn_<T> mo92477b(String str) {
         this.f64371c = str;
         return this;
     }
 
     /* renamed from: c */
-    public C26010a<T> mo92479c(String str) {
+    public Http_Request_rn_<T> mo92479c(String str) {
         this.f64372d = str;
         return this;
     }
 
     /* renamed from: a */
-    public C26010a<T> mo92469a(HttpMethod httpMethod) {
-        this.f64375g = httpMethod;
+    public Http_Request_rn_<T> set_http_method_rn_(HttpMethod httpMethod) {
+        this.http_method_rn_ = httpMethod;
         return this;
     }
 
     /* renamed from: b */
-    public C26010a<T> mo92476b(RequestBody requestBody) {
-        this.f64375g = HttpMethod.POST;
-        this.f64376h = requestBody;
+    public Http_Request_rn_<T> set_POST_request_body_rn_(RequestBody requestBody) {
+        this.http_method_rn_ = HttpMethod.POST;
+        this.request_body_rn_ = requestBody;
         return this;
     }
 
     /* renamed from: d */
-    public C26010a<T> mo92482d(String str) {
-        this.f64370b.remove(str);
+    public Http_Request_rn_<T> mo92482d(String str) {
+        this.http_headers_rn_.remove(str);
         return this;
     }
 
     /* renamed from: a */
-    public C26010a<T> mo92470a(HttpParams httpParams) {
-        this.f64369a = httpParams;
+    public Http_Request_rn_<T> set_http_parameters_rn_(HttpParams httpParams) {
+        this.http_params_rn_ = httpParams;
         return this;
     }
 
     /* renamed from: a */
-    public C26010a<T> mo92471a(RequestBody requestBody) {
-        this.f64376h = requestBody;
+    public Http_Request_rn_<T> set_request_body_rn_(RequestBody requestBody) {
+        this.request_body_rn_ = requestBody;
         return this;
     }
 
     /* renamed from: a */
-    public C26010a<T> mo92472a(String str) {
+    public Http_Request_rn_<T> mo92472a(String str) {
         this.f64371c = str;
         return this;
     }
@@ -165,14 +165,14 @@ public class C26010a<T> {
         this.f64378j.mo92408a(bVar);
     }
 
-    public C26010a(HttpMethod httpMethod, String str) {
-        this.f64375g = httpMethod;
+    public Http_Request_rn_(HttpMethod httpMethod, String str) {
+        this.http_method_rn_ = httpMethod;
         this.f64371c = str;
     }
 
     /* renamed from: a */
-    public C26010a<T> mo92473a(String str, String str2) {
-        this.f64370b.put(str, str2);
+    public Http_Request_rn_<T> mo92473a(String str, String str2) {
+        this.http_headers_rn_.put(str, str2);
         return this;
     }
 }

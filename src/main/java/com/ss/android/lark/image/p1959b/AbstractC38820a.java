@@ -1,7 +1,7 @@
 package com.ss.android.lark.image.p1959b;
 
 import android.content.Context;
-import com.larksuite.framework.http.response.C26014a;
+import com.larksuite.framework.http.response.Cookie_Details_Container_rn_;
 import com.ss.android.lark.biz.core.api.resource.Resource;
 import com.ss.android.lark.image.entity.AvatarImage;
 import com.ss.android.lark.image.entity.C38824b;
@@ -26,7 +26,7 @@ public interface AbstractC38820a {
     String mo142257a(C38825c cVar);
 
     /* renamed from: a */
-    List<C26014a> mo142258a(String str);
+    List<Cookie_Details_Container_rn_> mo142258a(String str);
 
     /* renamed from: a */
     void mo142259a(String str, Map<String, Float> map, Map<String, String> map2, Map<String, String> map3, boolean z);

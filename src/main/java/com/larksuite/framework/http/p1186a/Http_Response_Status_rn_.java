@@ -1,7 +1,7 @@
 package com.larksuite.framework.http.p1186a;
 
 /* renamed from: com.larksuite.framework.http.a.c */
-public class C25987c {
+public class Http_Response_Status_rn_ {
 
     /* renamed from: a */
     public static int f64335a = 200;
